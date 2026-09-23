@@ -14,6 +14,10 @@ const config=JSON.parse(fs.readFileSync('vercel.json','utf8'));
 const sources=new Set();
 for(const redirect of config.redirects){if(sources.has(redirect.source))errors.push(`Yinelenen yönlendirme: ${redirect.source}`);sources.add(redirect.source);if(!fs.existsSync(path.join(root,redirect.destination,'index.html')))errors.push(`Yönlendirme hedefi eksik: ${redirect.destination}`)}
 const home=fs.readFileSync(path.join(root,'index.html'),'utf8');
+for(const pattern of [/href="(\/assets\/app-[a-f0-9]{10}\.css)"/,/src="(\/assets\/site-[a-f0-9]{10}\.js)"/]){
+  const asset=home.match(pattern)?.[1];
+  if(!asset||!fs.existsSync(path.join(root,asset)))errors.push('Sürümlü CSS veya JS dosyası eksik.');
+}
 const expectedSite=(process.env.SITE_URL || 'https://sonsuzmakine.vercel.app').replace(/\/$/,'');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');

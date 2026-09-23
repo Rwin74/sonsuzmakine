@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {categories,products,articles} from './content.mjs';
 import {productTopics,productGuidance} from './seo-content.mjs';
 
@@ -8,7 +9,13 @@ const site=(process.env.SITE_URL || 'https://sonsuzmakine.vercel.app').replace(/
 fs.rmSync(root,{recursive:true,force:true});
 fs.mkdirSync(root,{recursive:true});
 fs.cpSync('public',root,{recursive:true});
-fs.writeFileSync(path.join(root,'assets','app.css'),['site.css','redesign.css','final.css','evolution.css'].map(name=>fs.readFileSync(path.join('public','assets',name),'utf8')).join('\n'));
+const styles=['site.css','redesign.css','final.css','evolution.css'].map(name=>fs.readFileSync(path.join('public','assets',name),'utf8')).join('\n');
+const script=fs.readFileSync(path.join('public','assets','site.js'));
+const hash=value=>createHash('sha256').update(value).digest('hex').slice(0,10);
+const stylesheet=`/assets/app-${hash(styles)}.css`;
+const scriptfile=`/assets/site-${hash(script)}.js`;
+fs.writeFileSync(path.join(root,stylesheet.slice(1)),styles);
+fs.writeFileSync(path.join(root,scriptfile.slice(1)),script);
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const url=p=>site+p;
 const arrow='<span aria-hidden="true">↗</span>';
@@ -20,7 +27,7 @@ function ld(obj){return `<script type="application/ld+json">${JSON.stringify(obj
 function layout({title,description,canonical,body,crumbs=[],schema=[],og='website'}){
  const fullTitle=title==='Sonsuz Makina | Kuruyemiş Kavurma ve Gıda Makineleri'?title:`${title} | Sonsuz Makina`;
  const breadcrumb=crumbs.length?ld({'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{ '@type':'ListItem',position:1,name:'Ana Sayfa',item:site+'/'},...crumbs.map((c,i)=>({'@type':'ListItem',position:i+2,name:c[0],item:url(c[1])}))]}):'';
- return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091f41"><title>${esc(fullTitle)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${url(canonical)}"><meta property="og:type" content="${og}"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Sonsuz Makina"><meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url(canonical)}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.png" type="image/png"><link rel="stylesheet" href="/assets/app.css">${ld({'@context':'https://schema.org','@type':'Organization',name:'Sonsuz Makina',url:site,logo:url('/assets/sonsuz-logo.svg'),telephone:'+90 258 265 99 90',email:'info@sonsuzmakina.com',address:{'@type':'PostalAddress',streetAddress:'Saraylar Mah. 157. Sok. No: 5',addressLocality:'Merkezefendi',addressRegion:'Denizli',addressCountry:'TR'}})}${breadcrumb}${schema.map(ld).join('')}</head><body><a class="skip" href="#content">İçeriğe geç</a>${nav()}<main id="content">${body}</main>${footer()}<script src="/assets/site.js" defer></script></body></html>`;
+ return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091f41"><title>${esc(fullTitle)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${url(canonical)}"><meta property="og:type" content="${og}"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Sonsuz Makina"><meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url(canonical)}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.png" type="image/png"><link rel="stylesheet" href="${stylesheet}">${ld({'@context':'https://schema.org','@type':'Organization',name:'Sonsuz Makina',url:site,logo:url('/assets/sonsuz-logo.svg'),telephone:'+90 258 265 99 90',email:'info@sonsuzmakina.com',address:{'@type':'PostalAddress',streetAddress:'Saraylar Mah. 157. Sok. No: 5',addressLocality:'Merkezefendi',addressRegion:'Denizli',addressCountry:'TR'}})}${breadcrumb}${schema.map(ld).join('')}</head><body><a class="skip" href="#content">İçeriğe geç</a>${nav()}<main id="content">${body}</main>${footer()}<script src="${scriptfile}" defer></script></body></html>`;
 }
 function write(route,html){
   const product=products.find(p=>route===`urunler/${p.slug}`);
