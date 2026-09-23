@@ -1,0 +1,43 @@
+{
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+    ] },
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ],
+  "redirects": [
+    { "source": "/urunlerimiz/", "destination": "/urunler/", "permanent": true },
+    { "source": "/contact/", "destination": "/iletisim/", "permanent": true },
+    { "source": "/category/kuruyemis-kavurma-makinalari/", "destination": "/urunler/kuruyemis-kavurma-makineleri/", "permanent": true },
+    { "source": "/category/kilavuzlu-kavurma-makinalari/", "destination": "/urunler/kilavuzlu-kavurma-makineleri/", "permanent": true },
+    { "source": "/category/kuruyemis-tuzlama-ekipmanlari/", "destination": "/urunler/kuruyemis-tuzlama-ekipmanlari/", "permanent": true },
+    { "source": "/category/kahve-kavurma-makinalari/", "destination": "/urunler/kahve-kavurma-makineleri/", "permanent": true },
+    { "source": "/category/isitma-yakit-sistemleri/", "destination": "/urunler/isitma-yakit-sistemleri/", "permanent": true },
+    { "source": "/category/kuruyemis-paketleme-makinalari/", "destination": "/urunler/kuruyemis-paketleme-makineleri/", "permanent": true },
+    { "source": "/category/elekler/", "destination": "/urunler/elekler/", "permanent": true },
+    { "source": "/category/leblebi-kizartma-makinalari/", "destination": "/urunler/leblebi-kizartma-makineleri/", "permanent": true },
+    { "source": "/category/cekmeli-kuruyemis-firinlari/", "destination": "/urunler/cekmeli-kuruyemis-firinlari/", "permanent": true },
+    { "source": "/category/leblebi-seker-makinalari/", "destination": "/urunler/leblebi-seker-makineleri/", "permanent": true },
+    { "source": "/category/sari-leblebi-imalat-makinasi/", "destination": "/urunler/sari-leblebi-imalat-makineleri/", "permanent": true },
+    { "source": "/category/secme-bandi/", "destination": "/urunler/secme-bantlari/", "permanent": true },
+    { "source": "/category/draje-palama-makinalari/", "destination": "/urunler/draje-kaplama-makineleri/", "permanent": true },
+    { "source": "/category/fritoz-ve-cips-uretim-makinalari/", "destination": "/urunler/fritoz-cips-uretim-makineleri/", "permanent": true },
+    { "source": "/galeri/", "destination": "/urunler/", "permanent": true },
+    { "source": "/referanslar/", "destination": "/hakkimizda/", "permanent": true },
+    { "source": "/e-katalog/", "destination": "/urunler/", "permanent": true },
+    { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi-2/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi-3/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-30-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-30-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-75-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-75-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-150-kavurma-ve-kurutma-makinasi/", "destination": "/urunler/ht-150-kavurma-kurutma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-500-kavurma-ve-kurutma-makinasi/", "destination": "/urunler/ht-500-kavurma-kurutma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-750-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-750-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/17/ht-1000-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-1000-kuruyemis-kavurma-makinesi/", "permanent": true }
+  ]
+}

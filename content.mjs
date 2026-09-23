@@ -1,0 +1,36 @@
+export const categories = [
+  {slug:'kuruyemis-kavurma-makineleri',name:'Kuruyemiş Kavurma Makineleri',short:'Bantlı kavurma ve kurutma hatları',intro:'Fındık, badem, yer fıstığı ve farklı kuruyemişler için üretim akışına göre yapılandırılabilen kavurma ve kurutma çözümleri.'},
+  {slug:'kilavuzlu-kavurma-makineleri',name:'Kılavuzlu Kavurma Makineleri',short:'Dönerli kavurma sistemleri',intro:'Parti bazlı kavurma süreçleri için kılavuzlu ve dönerli sistem seçenekleri.'},
+  {slug:'kuruyemis-tuzlama-ekipmanlari',name:'Kuruyemiş Tuzlama Ekipmanları',short:'Kaplama ve tatlandırma aşaması',intro:'Kavurma sonrası ürünün tuz ve baharatla homojen buluşmasına yönelik ekipmanlar.'},
+  {slug:'kahve-kavurma-makineleri',name:'Kahve Kavurma Makineleri',short:'Kahve çekirdeği için kavurma',intro:'Kahve üretim akışına uygun kavurma makinesi seçenekleri.'},
+  {slug:'isitma-yakit-sistemleri',name:'Isıtma ve Yakıt Sistemleri',short:'Hatlara uyumlu ısı çözümleri',intro:'Kavurma hatlarında ısı ihtiyacına göre değerlendirilen yardımcı sistemler.'},
+  {slug:'kuruyemis-paketleme-makineleri',name:'Kuruyemiş Paketleme Makineleri',short:'Üretimden paketlemeye',intro:'Kavurma ve işleme sonrasında paketleme aşamasına yönelik makine çözümleri.'},
+  {slug:'elekler',name:'Elekler',short:'Ayırma ve sınıflandırma',intro:'Ürün akışında eleme ve sınıflandırma için kullanılan ekipmanlar.'},
+  {slug:'leblebi-kizartma-makineleri',name:'Leblebi Kızartma Makineleri',short:'Leblebi üretimine özel',intro:'Leblebi işleme ve kızartma süreçlerine yönelik makine seçenekleri.'},
+  {slug:'cekmeli-kuruyemis-firinlari',name:'Çekmeli Kuruyemiş Fırınları',short:'Tepsili fırın çözümleri',intro:'Parti bazlı üretim için çekmeli fırın seçenekleri.'},
+  {slug:'leblebi-seker-makineleri',name:'Leblebi Şeker Makineleri',short:'Şekerleme ekipmanları',intro:'Leblebi şekerleme aşamasında kullanılan makineler.'},
+  {slug:'sari-leblebi-imalat-makineleri',name:'Sarı Leblebi İmalat Makineleri',short:'İmalat hattı ekipmanları',intro:'Sarı leblebi üretiminin işlem adımlarına yönelik makine seçenekleri.'},
+  {slug:'secme-bantlari',name:'Seçme Bantları',short:'Görsel kalite kontrol',intro:'Ürün seçme ve ayıklama akışına uyumlu bant sistemleri.'},
+  {slug:'draje-kaplama-makineleri',name:'Draje Kaplama Makineleri',short:'Kaplama prosesleri',intro:'Kuruyemiş ve şekerleme ürünlerinde draje kaplama için makine seçenekleri.'},
+  {slug:'fritoz-cips-uretim-makineleri',name:'Fritöz ve Cips Üretim Makineleri',short:'Kızartma üretim hattı',intro:'Cips ve benzeri ürünlerin kızartma aşamasına yönelik ekipmanlar.'}
+];
+
+const roast='kuruyemis-kavurma-makineleri';
+export const products = [
+  {model:'HT 15',slug:'ht-15-kuruyemis-kavurma-makinesi',name:'HT 15 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kompakt ölçekte kuruyemiş kavurma için HT serisi model.',image:'ht-15.webp'},
+  {model:'HT 30',slug:'ht-30-kuruyemis-kavurma-makinesi',name:'HT 30 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma üretim hattı için HT serisi model.',image:'ht-30.webp'},
+  {model:'HT 75',slug:'ht-75-kuruyemis-kavurma-makinesi',name:'HT 75 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma ve proses planlamasında değerlendirilebilen HT serisi model.',image:'ht-75.webp'},
+  {model:'HT 150',slug:'ht-150-kavurma-kurutma-makinesi',name:'HT 150 Kavurma ve Kurutma Makinesi',category:roast,summary:'Kavurma ve kurutma prosesleri için HT serisi makine.',image:'ht-150.webp',specs:[['Uzunluk','3350 mm'],['Genişlik','1800 mm'],['Yükseklik','2250 mm']]},
+  {model:'HT 500',slug:'ht-500-kavurma-kurutma-makinesi',name:'HT 500 Kavurma ve Kurutma Makinesi',category:roast,summary:'Kavurma ve kurutma hatlarında kullanılan HT serisi model.',image:'ht-500.webp'},
+  {model:'HT 750',slug:'ht-750-kuruyemis-kavurma-makinesi',name:'HT 750 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Yüksek hacimli üretim planları için HT serisi kavurma makinesi.',image:'ht-750.webp'},
+  {model:'HT 1000',slug:'ht-1000-kuruyemis-kavurma-makinesi',name:'HT 1000 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Büyük ölçekli kuruyemiş kavurma hatları için HT serisi model.',image:'ht-1000.webp'},
+  {model:'HTL 200',slug:'htl-200-leblebi-kavurma-makinesi',name:'HTL 200 Leblebi Kavurma Makinesi',category:'leblebi-kizartma-makineleri',summary:'Leblebi kavurma süreçlerine yönelik HTL serisi model.',image:'htl-200.webp'},
+  {model:'HT 30 CR',slug:'ht-30-cr-kahve-kavurma-makinesi',name:'HT 30 CR Kahve Kavurma Makinesi',category:'kahve-kavurma-makineleri',summary:'Kahve çekirdeği kavurma için HT CR serisi model.',image:'ht-30-cr.webp'},
+  {model:'HDT 90',slug:'hdt-90-draje-kaplama-makinesi',name:'HDT 90 Draje Kaplama Makinesi',category:'draje-kaplama-makineleri',summary:'Draje kaplama üretim aşaması için HDT serisi model.',image:'hdt-90.webp'}
+];
+
+export const articles = [
+  {slug:'kuruyemis-kavurma-makinesi-secimi',title:'Kuruyemiş kavurma makinesi seçerken hangi soruları sormalısınız?',desc:'Üründen hedef kapasiteye, yerleşimden servis planına kadar makine görüşmesinde netleştirilmesi gereken başlıklar.',date:'2026-09-23',sections:[['Önce ürünü ve akışı tanımlayın','Fındık, badem, kaju ve yer fıstığı aynı başlangıç koşullarına sahip değildir. Ürünün nemi, boyut dağılımı ve hedef kavurma profili makine seçimini etkiler. Tek bir katalog rakamına bakmadan önce hangi ürünü, hangi reçeteyle işleyeceğinizi yazın.'],['Kapasiteyi gerçek üretim planıyla konuşun','Saatlik hedef kadar vardiya süresi, ürün değişimi ve temizlik araları da önemlidir. Nominal kapasitenin hangi üründe ve hangi şartlarda ölçüldüğünü üreticiden isteyin.'],['Hat yerleşimi ve destek','Besleme, kavurma, soğutma, eleme ve paketleme adımlarını birlikte düşünün. Alan ölçülerini, enerji altyapısını ve servis erişimini teklif aşamasında paylaşın.']]},
+  {slug:'kavurma-ve-kurutma-arasindaki-fark',title:'Kavurma ve kurutma: üretim hattında iki ayrı hedef',desc:'Nem yönetimi ve tat geliştirme süreçlerini ayırarak doğru proses sorularını sormaya yardımcı olan kısa rehber.',date:'2026-09-23',sections:[['Kurutmanın amacı','Kurutma, üründeki nemi hedeflenen aralığa çekmek için planlanır. Başlangıç nemi ve son ürün beklentisi proses ayarlarını belirler.'],['Kavurmanın amacı','Kavurma, ısı etkisiyle ürünün tat, koku ve renk profilini oluşturur. Aynı makinede iki işlem yapılabilse de reçete hedefleri ayrı değerlendirilmelidir.'],['Deneme üretimi isteyin','Ticari karar öncesinde kendi hammaddenizle deneme yapıp sonuçları kaydedin. Ürün kalitesini süre, sıcaklık ve son nem gibi ölçümlerle birlikte değerlendirin.']]},
+  {slug:'kuruyemis-uretim-hatti-planlama',title:'Kuruyemiş üretim hattı nasıl planlanır?',desc:'Beslemeden paketlemeye ekipman sıralaması, alan ihtiyacı ve işletme akışı üzerine pratik bir başlangıç.',date:'2026-09-23',sections:[['Hammadde girişinden başlayın','Giriş kalitesi, depolama ve besleme biçimi hattın geri kalanını etkiler. Eleme ve ayıklama ihtiyacını ilk aşamada belirleyin.'],['Darboğazı bulun','Kavurma makinesinin kapasitesi tek başına toplam hat kapasitesini belirlemez. Soğutma, seçme, tuzlama ve paketleme adımlarının hızlarını birlikte değerlendirin.'],['Ölçeklenebilir yerleşim','Bakım ve temizlik için erişim alanı bırakın. Gelecekte eklemek isteyeceğiniz ekipman ve ürün çeşitlerini yerleşim planına dahil edin.']]}
+];
