@@ -65,3 +65,39 @@ if(search){
 }
 const gallery=document.querySelector('.gallery-dialog');
 if(gallery){document.querySelectorAll('[data-gallery-src]').forEach(button=>button.addEventListener('click',()=>{gallery.querySelector('img').src=button.dataset.gallerySrc;gallery.showModal()}));gallery.querySelector('.gallery-close').addEventListener('click',()=>gallery.close());gallery.addEventListener('click',event=>{if(event.target===gallery)gallery.close()})}
+const zoomDialog=document.querySelector('.product-zoom-dialog');
+if(zoomDialog){
+  const stage=zoomDialog.querySelector('.zoom-stage');
+  const img=stage.querySelector('img');
+  const value=zoomDialog.querySelector('.zoom-value');
+  const title=zoomDialog.querySelector('.zoom-title');
+  const pointers=new Map();
+  let scale=1,x=0,y=0,pinchDistance=0;
+  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+  const render=()=>{img.style.transform=`translate(${x}px,${y}px) scale(${scale})`;value.textContent=`${Math.round(scale*100)}%`};
+  const setScale=next=>{scale=clamp(next,1,4);if(scale===1)x=y=0;render()};
+  document.querySelectorAll('[data-zoom-src]').forEach(button=>button.addEventListener('click',()=>{
+    img.src=button.dataset.zoomSrc;
+    img.alt=button.dataset.zoomAlt||'Büyütülmüş ürün görseli';
+    title.textContent=img.alt;
+    scale=1;x=y=0;render();
+    zoomDialog.showModal();
+  }));
+  zoomDialog.querySelector('.zoom-close').addEventListener('click',()=>zoomDialog.close());
+  zoomDialog.querySelector('.zoom-in').addEventListener('click',()=>setScale(scale+.5));
+  zoomDialog.querySelector('.zoom-out').addEventListener('click',()=>setScale(scale-.5));
+  zoomDialog.addEventListener('click',event=>{if(event.target===zoomDialog)zoomDialog.close()});
+  zoomDialog.addEventListener('close',()=>{pointers.clear();img.removeAttribute('src')});
+  stage.addEventListener('wheel',event=>{event.preventDefault();setScale(scale+(event.deltaY<0?.25:-.25))},{passive:false});
+  stage.addEventListener('dblclick',()=>setScale(scale===1?2:1));
+  const distance=()=>{const [a,b]=[...pointers.values()];return Math.hypot(a.x-b.x,a.y-b.y)};
+  stage.addEventListener('pointerdown',event=>{stage.setPointerCapture(event.pointerId);pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});if(pointers.size===2)pinchDistance=distance()});
+  stage.addEventListener('pointermove',event=>{
+    const previous=pointers.get(event.pointerId);if(!previous)return;
+    pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(pointers.size===2){const next=distance();if(pinchDistance)setScale(scale*next/pinchDistance);pinchDistance=next}
+    else if(scale>1){x+=event.clientX-previous.x;y+=event.clientY-previous.y;render()}
+  });
+  const endPointer=event=>{pointers.delete(event.pointerId);pinchDistance=0};
+  stage.addEventListener('pointerup',endPointer);stage.addEventListener('pointercancel',endPointer);
+}
