@@ -8,7 +8,8 @@
       { "key": "X-Content-Type-Options", "value": "nosniff" },
       { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
     ] },
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }] },
+    { "source": "/assets/catalog/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ],
   "redirects": [
     { "source": "/urunlerimiz/", "destination": "/urunler/", "permanent": true },
@@ -27,9 +28,6 @@
     { "source": "/category/secme-bandi/", "destination": "/urunler/secme-bantlari/", "permanent": true },
     { "source": "/category/draje-palama-makinalari/", "destination": "/urunler/draje-kaplama-makineleri/", "permanent": true },
     { "source": "/category/fritoz-ve-cips-uretim-makinalari/", "destination": "/urunler/fritoz-cips-uretim-makineleri/", "permanent": true },
-    { "source": "/galeri/", "destination": "/urunler/", "permanent": true },
-    { "source": "/referanslar/", "destination": "/hakkimizda/", "permanent": true },
-    { "source": "/e-katalog/", "destination": "/urunler/", "permanent": true },
     { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
     { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi-2/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
     { "source": "/2023/09/20/ht-15-kuruyemis-kavurma-makinasi-3/", "destination": "/urunler/ht-15-kuruyemis-kavurma-makinesi/", "permanent": true },
@@ -38,6 +36,35 @@
     { "source": "/2023/09/20/ht-150-kavurma-ve-kurutma-makinasi/", "destination": "/urunler/ht-150-kavurma-kurutma-makinesi/", "permanent": true },
     { "source": "/2023/09/20/ht-500-kavurma-ve-kurutma-makinasi/", "destination": "/urunler/ht-500-kavurma-kurutma-makinesi/", "permanent": true },
     { "source": "/2023/09/20/ht-750-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-750-kuruyemis-kavurma-makinesi/", "permanent": true },
-    { "source": "/2023/09/17/ht-1000-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-1000-kuruyemis-kavurma-makinesi/", "permanent": true }
+    { "source": "/2023/09/17/ht-1000-kuruyemis-kavurma-makinasi/", "destination": "/urunler/ht-1000-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-100-kilavuzlu-kavurma-firinlari/", "destination": "/urunler/ht-100-kilavuzlu-kavurma-firini/", "permanent": true },
+    { "source": "/2023/09/20/ht-120-kilavuzlu-kavurma-firinlari/", "destination": "/urunler/ht-120-kilavuzlu-kavurma-firini/", "permanent": true },
+    { "source": "/2023/09/20/ht-130-kilavuzlu-kavurma-firinlari/", "destination": "/urunler/ht-130-kilavuzlu-kavurma-firini/", "permanent": true },
+    { "source": "/2023/09/20/ht-150-kilavuzlu-kavurma-firinlari/", "destination": "/urunler/ht-150-kilavuzlu-kavurma-firini/", "permanent": true },
+    { "source": "/2023/09/20/ht-manuel-tuzlama-makinasi/", "destination": "/urunler/ht-manuel-tuzlama-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/ht-manuel-tuzlama-makinasi-2/", "destination": "/urunler/ht-manuel-tuzlama-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/prina-yakit-makinasi/", "destination": "/urunler/prina-yakit-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/2-kefeli-yari-otomatik-dolum-sistemi/", "destination": "/urunler/iki-kefeli-yari-otomatik-dolum-sistemi/", "permanent": true },
+    { "source": "/2023/09/20/4-kefeli-yari-otomatik-dolum-makinasi/", "destination": "/urunler/dort-kefeli-yari-otomatik-dolum-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/4-kefeli-otomatik-kuruyemis-paketleme-makinasi/", "destination": "/urunler/dort-kefeli-otomatik-paketleme-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/5-kefeli-otomatik-kuruyemis-paketleme-makinasi/", "destination": "/urunler/bes-kefeli-otomatik-paketleme-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/elek/", "destination": "/urunler/elek/", "permanent": true },
+    { "source": "/2023/09/20/14-cekmeceli-kuruyemis-firini/", "destination": "/urunler/on-dort-cekmeceli-kuruyemis-firini/", "permanent": true },
+    { "source": "/2023/09/20/7-cekmeceli-kuruyemis-firini/", "destination": "/urunler/yedi-cekmeceli-kuruyemis-firini/", "permanent": true },
+    { "source": "/2023/09/20/nohut-sulama-makinesi/", "destination": "/urunler/nohut-sulama-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/bandirma-nohut-makinesi/", "destination": "/urunler/bandirma-nohut-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/draje-bakir-cift-kazan/", "destination": "/urunler/draje-bakir-cift-kazan/", "permanent": true },
+    { "source": "/2023/09/20/draje-krom-cift-kazan/", "destination": "/urunler/draje-krom-cift-kazan/", "permanent": true },
+    { "source": "/2023/09/20/draje-krom-tek-kazan/", "destination": "/urunler/draje-krom-tek-kazan/", "permanent": true },
+    { "source": "/2023/09/20/sari-nohut-yapma-makinesi/", "destination": "/urunler/sari-nohut-yapma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/nohut-isitma-makinesi/", "destination": "/urunler/nohut-isitma-makinesi/", "permanent": true },
+    { "source": "/2023/09/20/secme-bandi/", "destination": "/urunler/secme-bandi/", "permanent": true },
+    { "source": "/2023/09/20/ht-30-kahve-kavurma-makinasi/", "destination": "/urunler/ht-30-kahve-kavurma-makinesi/", "permanent": true },
+    { "source": "/2023/11/11/leblebi-kavurma-makinalari-ve-modelleri/", "destination": "/urunler/leblebi-kavurma-makinesi/", "permanent": true },
+    { "source": "/urunler/ht-30-cr-kahve-kavurma-makinesi/", "destination": "/urunler/ht-30-kahve-kavurma-makinesi/", "permanent": true },
+    { "source": "/urunler/htl-200-leblebi-kavurma-makinesi/", "destination": "/urunler/leblebi-kavurma-makinesi/", "permanent": true },
+    { "source": "/urunler/hdt-90-draje-kaplama-makinesi/", "destination": "/urunler/draje-kaplama-sistemi/", "permanent": true },
+    { "source": "/2023/11/11/draje-kaplama-makinalari/", "destination": "/urunler/draje-kaplama-sistemi/", "permanent": true },
+    { "source": "/2023/11/11/fritoz-ve-cips-uretim-makinalari/", "destination": "/urunler/fritoz-cips-uretim-sistemi/", "permanent": true }
   ]
 }
