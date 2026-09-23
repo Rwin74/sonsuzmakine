@@ -15,21 +15,26 @@ if(play){
     video=document.createElement('video');
     video.className='brand-video';
     video.playsInline=true;
-    video.preload='none';
+    video.preload='metadata';
     video.poster='/assets/hero/uretim-video.jpg';
-    video.src=frame.querySelector('.video-slot').dataset.src;
+    const slot=frame.querySelector('.video-slot');
+    video.src=matchMedia('(max-width: 680px)').matches?slot.dataset.mobileSrc:slot.dataset.src;
     video.setAttribute('aria-label','Sonsuz Makina üretim filmi');
-    frame.querySelector('.video-slot').replaceWith(video);
+    slot.replaceWith(video);
     video.addEventListener('play',()=>{toggle.textContent='Ⅱ';toggle.setAttribute('aria-label','Videoyu duraklat')});
+    video.addEventListener('waiting',()=>frame.classList.add('is-buffering'));
+    video.addEventListener('playing',()=>{frame.classList.remove('is-buffering');frame.classList.add('is-playing')});
+    video.addEventListener('canplay',()=>frame.classList.remove('is-buffering'));
     video.addEventListener('pause',()=>{toggle.textContent='▶';toggle.setAttribute('aria-label','Videoyu oynat')});
     video.addEventListener('loadedmetadata',()=>{duration.textContent=format(video.duration)});
     video.addEventListener('timeupdate',()=>{time.textContent=format(video.currentTime);progress.value=video.duration?Math.round(video.currentTime/video.duration*100):0});
     video.addEventListener('ended',()=>{frame.classList.remove('is-playing');play.setAttribute('aria-label','Videoyu yeniden oynat')});
-    video.addEventListener('error',()=>frame.classList.add('video-error'));
+    video.addEventListener('error',()=>{frame.classList.remove('is-buffering');frame.classList.add('video-error')});
   }
   play.addEventListener('click',async()=>{
     if(!video)createVideo();
-    try{await video.play();frame.classList.add('is-playing')}catch{frame.classList.add('video-error')}
+    frame.classList.add('is-buffering');
+    try{await video.play();frame.classList.add('is-playing')}catch{frame.classList.remove('is-buffering');frame.classList.add('video-error')}
   });
   toggle.addEventListener('click',()=>video.paused?video.play():video.pause());
   progress.addEventListener('input',()=>{if(video.duration)video.currentTime=Number(progress.value)/100*video.duration});

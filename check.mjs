@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {products} from './content.mjs';
+import {productTopics} from './seo-content.mjs';
 const root=path.resolve('dist');
 if(!fs.existsSync(root))throw Error('Önce node build.mjs çalıştırın.');
 const pages=[];
@@ -12,7 +14,18 @@ const config=JSON.parse(fs.readFileSync('vercel.json','utf8'));
 const sources=new Set();
 for(const redirect of config.redirects){if(sources.has(redirect.source))errors.push(`Yinelenen yönlendirme: ${redirect.source}`);sources.add(redirect.source);if(!fs.existsSync(path.join(root,redirect.destination,'index.html')))errors.push(`Yönlendirme hedefi eksik: ${redirect.destination}`)}
 const home=fs.readFileSync(path.join(root,'index.html'),'utf8');
-for(const asset of ['assets/sonsuz-logo.svg','assets/hero/uretim-video.jpg','assets/hero/sonsuz-makina-uretim.mp4','assets/catalog/sonsuz-makina-katalog.pdf'])if(!fs.existsSync(path.join(root,asset)))errors.push(`Temel varlık eksik: ${asset}`);
+const expectedSite=(process.env.SITE_URL || 'https://sonsuzmakine.vercel.app').replace(/\/$/,'');
+const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
+const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
+if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
+if(!sitemap.includes(`<loc>${expectedSite}/</loc>`)||!robots.includes(`Sitemap: ${expectedSite}/sitemap.xml`))errors.push('Site haritası ve robots.txt yayın adresiyle eşleşmiyor.');
+for(const product of products){
+  const html=fs.readFileSync(path.join(root,'urunler',product.slug,'index.html'),'utf8');
+  const topics=productTopics(product);
+  if(topics.length!==5||new Set(topics).size!==5)errors.push(`${product.slug}: beş benzersiz arama niyeti yok.`);
+  for(const topic of topics)if(!html.includes(topic.replaceAll('&','&amp;')))errors.push(`${product.slug}: görünür terim eksik: ${topic}`);
+}
+for(const asset of ['assets/sonsuz-logo.svg','assets/hero/uretim-video.jpg','assets/hero/sonsuz-makina-uretim-v2.mp4','assets/catalog/sonsuz-makina-katalog-v2.pdf'])if(!fs.existsSync(path.join(root,asset)))errors.push(`Temel varlık eksik: ${asset}`);
 if(!home.includes('class="video-slot"')||home.includes('<iframe'))errors.push('Ana sayfa videosu ilk yüklemede harici oynatıcıya bağlı.');
 if(!fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').includes('<video:video>'))errors.push('Video sitemap girdisi eksik.');
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1}else console.log(`${pages.length} HTML sayfası: başlıklar, metalar, şema ve iç bağlantılar doğrulandı.`);
