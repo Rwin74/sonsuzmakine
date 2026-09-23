@@ -20,6 +20,7 @@ Varsayılan yayın adresi `https://www.sonsuzmakina.com` olarak ayarlanmıştır
 
 - Marka, teknik ölçü ve ürün model listesini üreticiyle doğrulayın. Doğrulanmamış kapasite ve fiyat eklenmedi.
 - Search Console'da `sonsuzmakina.com` alan adı mülkünü doğrulayın ve `https://www.sonsuzmakina.com/sitemap.xml` adresini gönderin.
+- `googleee526f6a32479162.html` dosyası yayın çıktısının köküne aynen kopyalanır. Bu dosya Search Console **URL öneki** mülkünü doğrular. **Alan adı** mülkü için Google'ın verdiği TXT kaydını yetkili DNS bölgesine ekleyin; HTML dosyası bu yöntem için yeterli değildir. Dosyayı doğrulama sonrasında da yayında tutun.
 - Eski WordPress URL listesini dışa aktarıp `vercel.json` yönlendirmelerini tamamlayın.
 - Galeri, referans ve katalog sayfalarındaki içeriklerin güncelliğini firma ile doğrulayın.
 - Kapasite, enerji tüketimi, ölçüler, vaka çalışmaları ve servis koşulları için üretici onaylı teknik verileri ekleyin. Sitede tahmini fiyat veya doğrulanmamış performans iddiası yoktur.

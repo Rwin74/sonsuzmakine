@@ -14,4 +14,34 @@
 .zoom-hint{top:18px;bottom:auto}
 @media(max-width:680px){.zoom-hint{top:auto;bottom:12px}}
 @media(max-width:680px){.card-zoom>span{display:inline}}
-@media(prefers-reduced-motion:reduce){.marquee-track{animation:marqueeRight 75s linear infinite}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none;transform:none}}
+/* Teknik rehberler ve ürün sayfaları için hafif, statik bağlantı blokları. */
+.editorial-note{margin:2.5rem 0 0;padding:1.25rem 1.5rem;border-left:3px solid #ce2637;background:#f5f7fa;color:#26344a;line-height:1.65}
+.editorial-note strong,.guide-links strong{display:block;margin-bottom:.4rem;color:#0d2342}
+.editorial-note p{margin:0}
+.guide-links{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0 0}
+.guide-links strong{flex-basis:100%}
+.guide-links a{padding:.7rem 1rem;border:1px solid #d4dae4;border-radius:.35rem;color:#0d2342;text-decoration:none}
+.guide-links a:hover,.guide-links a:focus-visible{border-color:#ce2637;color:#b2182c}
+.related-guides{padding-top:3rem;padding-bottom:4rem}
+.related-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.related-guide-grid a{display:flex;flex-direction:column;gap:.8rem;min-height:12rem;padding:1.4rem;border:1px solid #dce2ea;background:#fff;color:#0d2342;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.related-guide-grid a:hover,.related-guide-grid a:focus-visible{transform:translateY(-3px);border-color:#ce2637}
+.related-guide-grid span{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#b2182c}
+.related-guide-grid b{font-size:1.1rem;line-height:1.3}
+.related-guide-grid small{margin-top:auto;font-weight:700}
+.guide-figure{margin:2rem 0 2.5rem;padding:1rem;background:#f1f4f8;text-align:center}
+.guide-figure img{display:block;max-width:100%;width:min(100%,640px);height:auto;max-height:400px;object-fit:contain;margin:auto}
+.guide-figure figcaption{margin-top:.65rem;font-size:.8rem;color:#526174}
+.guide-tool{margin-top:2.5rem}
+.guide-tool h2{margin:0 0 1rem}
+.guide-table-wrap{max-width:100%;overflow-x:auto}
+.guide-tool table{width:100%;border-collapse:collapse;text-align:left;font-size:.94rem;line-height:1.55}
+.guide-tool th,.guide-tool td{padding:.85rem 1rem;border-bottom:1px solid #dce2ea;vertical-align:top}
+.guide-tool thead{background:#0d2342;color:#fff}
+.guide-tool tbody th{width:28%;font-weight:700;color:#0d2342}
+.guide-decision{margin-top:2rem;padding:1.5rem;background:#0d2342;color:#f1f5fb}
+.guide-decision h2{margin:0 0 .7rem;color:#fff}
+.guide-decision p{margin:0;line-height:1.7}
+@media(max-width:760px){.related-guide-grid{grid-template-columns:1fr}.related-guide-grid a{min-height:0}.editorial-note{padding:1rem}}
+@media(prefers-reduced-motion:reduce){.related-guide-grid a{transition:none}.related-guide-grid a:hover{transform:none}}

@@ -19,6 +19,8 @@ for(const pattern of [/href="(\/assets\/app-[a-f0-9]{10}\.css)"/,/src="(\/assets
   if(!asset||!fs.existsSync(path.join(root,asset)))errors.push('Sürümlü CSS veya JS dosyası eksik.');
 }
 const expectedSite=(process.env.SITE_URL || 'https://www.sonsuzmakina.com').replace(/\/$/,'');
+const verification='googleee526f6a32479162.html';
+if(!fs.existsSync(path.join(root,verification))||fs.readFileSync(path.join(root,verification),'utf8')!==fs.readFileSync(verification,'utf8'))errors.push('Google alan adı doğrulama dosyası yayın kökünde eksik veya değişmiş.');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
