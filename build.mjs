@@ -5,7 +5,7 @@ import {categories,products,articles} from './content.mjs';
 import {productTopics,productGuidance} from './seo-content.mjs';
 
 const root=path.resolve('dist');
-const site=(process.env.SITE_URL || 'https://sonsuzmakine.vercel.app').replace(/\/$/,'');
+const site=(process.env.SITE_URL || 'https://www.sonsuzmakina.com').replace(/\/$/,'');
 fs.rmSync(root,{recursive:true,force:true});
 fs.mkdirSync(root,{recursive:true});
 fs.cpSync('public',root,{recursive:true});

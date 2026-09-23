@@ -12,14 +12,14 @@ E-katalog `public/assets/catalog/sonsuz-makina-katalog-v2.pdf` yolundadır. Firm
 
 ## Yayın adresi ve SEO
 
-Varsayılan yayın adresi `https://sonsuzmakine.vercel.app` olarak ayarlanmıştır. Canonical adresler, sosyal paylaşım URL'leri, yapılandırılmış veriler, `robots.txt` ve `sitemap.xml` bu adrese göre derlenir. Alan adı bağlandığında Vercel proje ortam değişkenine `SITE_URL=https://sonsuzmakina.com` girip yeniden dağıtım yapın. Eski alan adındaki WordPress adreslerini yeni sayfalara 301 yönlendirmek için eski alan adını da aynı Vercel projesine bağlayın.
+Varsayılan yayın adresi `https://www.sonsuzmakina.com` olarak ayarlanmıştır. Canonical adresler, sosyal paylaşım URL'leri, yapılandırılmış veriler, `robots.txt` ve `sitemap.xml` bu adrese göre derlenir. Vercel projesinde `SITE_URL` ortam değişkeni tanımlıysa aynı adresi (`https://www.sonsuzmakina.com`) kullanın; farklı bir değer varsayılanı geçersiz kılar. Ana alan adı Vercel'de `www` adresine 308 ile yönlendirilir.
 
 32 ürün sayfasının her birinde model ve ürün grubuyla ilişkili beş arama konusu, görünür ürün seçimi içeriğinde yer alır. Google sıralama için `meta keywords` etiketini kullanmadığından bu etiket eklenmedi. Teknik kapasite, fiyat ve performans rakamları firma doğrulaması olmadan yayımlanmadı.
 
 ## Yayın öncesi
 
 - Marka, teknik ölçü ve ürün model listesini üreticiyle doğrulayın. Doğrulanmamış kapasite ve fiyat eklenmedi.
-- Search Console'a `https://sonsuzmakine.vercel.app/sitemap.xml` gönderin. Alan adı taşındıktan sonra yeni alan adı mülkünü doğrulayıp o alanın site haritasını da gönderin.
+- Search Console'da `sonsuzmakina.com` alan adı mülkünü doğrulayın ve `https://www.sonsuzmakina.com/sitemap.xml` adresini gönderin.
 - Eski WordPress URL listesini dışa aktarıp `vercel.json` yönlendirmelerini tamamlayın.
 - Galeri, referans ve katalog sayfalarındaki içeriklerin güncelliğini firma ile doğrulayın.
 - Kapasite, enerji tüketimi, ölçüler, vaka çalışmaları ve servis koşulları için üretici onaylı teknik verileri ekleyin. Sitede tahmini fiyat veya doğrulanmamış performans iddiası yoktur.

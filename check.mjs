@@ -18,7 +18,7 @@ for(const pattern of [/href="(\/assets\/app-[a-f0-9]{10}\.css)"/,/src="(\/assets
   const asset=home.match(pattern)?.[1];
   if(!asset||!fs.existsSync(path.join(root,asset)))errors.push('Sürümlü CSS veya JS dosyası eksik.');
 }
-const expectedSite=(process.env.SITE_URL || 'https://sonsuzmakine.vercel.app').replace(/\/$/,'');
+const expectedSite=(process.env.SITE_URL || 'https://www.sonsuzmakina.com').replace(/\/$/,'');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
