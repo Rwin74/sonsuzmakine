@@ -25,6 +25,7 @@
     { "source": "/category/leblebi-kizartma-makinalari/", "destination": "/urunler/leblebi-kizartma-makineleri/", "permanent": true },
     { "source": "/category/cekmeli-kuruyemis-firinlari/", "destination": "/urunler/cekmeli-kuruyemis-firinlari/", "permanent": true },
     { "source": "/category/leblebi-seker-makinalari/", "destination": "/urunler/leblebi-seker-makineleri/", "permanent": true },
+    { "source": "/category/leblebi-seker-makineleri/", "destination": "/urunler/leblebi-seker-makineleri/", "permanent": true },
     { "source": "/category/sari-leblebi-imalat-makinasi/", "destination": "/urunler/sari-leblebi-imalat-makineleri/", "permanent": true },
     { "source": "/category/secme-bandi/", "destination": "/urunler/secme-bantlari/", "permanent": true },
     { "source": "/category/draje-palama-makinalari/", "destination": "/urunler/draje-kaplama-makineleri/", "permanent": true },
