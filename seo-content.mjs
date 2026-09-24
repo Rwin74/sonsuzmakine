@@ -28,6 +28,7 @@ export function productTopics(product){
   const base=topics[product.category] || [];
   const model=product.model.toLocaleLowerCase('tr-TR');
   const specific=`${product.name.toLocaleLowerCase('tr-TR')} ${/makinesi|fırını|sistemi|bandı|eleği|kazanı/.test(product.name.toLocaleLowerCase('tr-TR'))?'':'modeli'}`.trim();
+  if(product.category==='kuruyemis-kavurma-makineleri') return [...new Set([specific,'ikinci el kavurma makinesi',...base.filter(s=>!s.includes(model)),`${specific} için teklif`])].slice(0,5);
   return [...new Set([specific,...base.filter(s=>!s.includes(model)),`${specific} için teklif`,`${model} makine modeli`])].slice(0,5);
 }
 
