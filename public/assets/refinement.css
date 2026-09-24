@@ -62,4 +62,19 @@
 .language-flag{font-size:18px;line-height:1}
 @media(max-width:1000px){.nav .language-switcher{margin-inline-start:auto;margin-inline-end:8px}.language-option{min-width:48px;padding:0 7px}}
 @media(max-width:420px){.language-switcher{gap:2px;padding:3px}.language-option{min-width:42px;gap:3px;padding:0 5px;font-size:9px}.language-flag{font-size:16px}}
+@media(max-width:1000px){.site-header .wrap.nav{gap:10px}.site-header .brand-logo{width:clamp(130px,38vw,165px)}}
+@media(max-width:360px){.site-header .brand-logo{width:118px}.language-switcher{gap:1px;padding:2px}.language-option{min-width:30px;min-height:36px;padding:0 2px}.language-option>span:not(.language-flag){display:none}.language-flag{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.language-option{transition:none}.language-option:hover{transform:none}}
+
+html[dir="rtl"] .hero-grid{direction:rtl}
+html[dir="rtl"] .hero-copy{text-align:right;align-items:flex-start}
+html[dir="rtl"] .hero h1,html[dir="rtl"] .page-intro h1,html[dir="rtl"] .prose-page h1{font-family:system-ui,"Noto Naskh Arabic",Tahoma,sans-serif;font-size:clamp(40px,4.5vw,68px);letter-spacing:0;line-height:1.35}
+html[dir="rtl"] .hero-copy>p{text-align:right;line-height:1.9}
+html[dir="rtl"] .hero-actions,html[dir="rtl"] .hero-path{direction:rtl}
+html[dir="rtl"] .hero-path a+a{border-left:0;border-right:1px solid #ffffff26;padding-left:0;padding-right:22px}
+html[dir="rtl"] .hero-path a{align-items:flex-start;text-align:right}
+html[dir="rtl"] .footer-grid,html[dir="rtl"] .contact-grid,html[dir="rtl"] .product-detail-grid{direction:rtl}
+html[dir="rtl"] .button,html[dir="rtl"] .card-link{direction:rtl}
+html[dir="rtl"] .hero-visual{direction:ltr}
+html[dir="rtl"] .footer-socials{direction:ltr;justify-content:flex-start}
+@media(max-width:760px){html[dir="rtl"] .hero-grid{display:flex;flex-direction:column}.hero-visual{width:100%}}
