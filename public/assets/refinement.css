@@ -53,3 +53,13 @@
 @media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}.whatsapp-float:hover{transform:none}}
 
 .footer-socials{display:flex;justify-content:flex-end;gap:12px;max-width:1320px;margin:0 auto;padding:0 24px 28px}.footer-socials a{display:grid;place-items:center;width:44px;height:44px;border:1px solid #ffffff4a;border-radius:50%;color:#fff;transition:background-color .18s ease,border-color .18s ease,transform .18s ease}.footer-socials a:hover,.footer-socials a:focus-visible{background:#d9253d;border-color:#ff6676;transform:translateY(-2px)}.footer-socials svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.footer-socials a:nth-child(2) svg,.footer-socials a:nth-child(3) svg{fill:currentColor;stroke:none}.footer-socials .social-dot{fill:currentColor;stroke:none}@media(max-width:680px){.footer-socials{justify-content:center;padding-bottom:24px}}@media(prefers-reduced-motion:reduce){.footer-socials a{transition:none}.footer-socials a:hover{transform:none}}
+
+.language-switcher{display:flex;align-items:center;gap:6px;flex:none;margin-inline-start:auto;padding:5px;border:1px solid #dbe2ea;border-radius:999px;background:#fff;box-shadow:0 5px 16px #071b3410}
+.language-option{display:flex;align-items:center;justify-content:center;gap:5px;min-width:54px;min-height:38px;padding:0 9px;border:1px solid transparent;border-radius:999px;color:#22344b;font:800 10px/1 system-ui,sans-serif;letter-spacing:.04em;transition:background-color .16s ease,color .16s ease,border-color .16s ease,transform .16s ease}
+.language-option:hover,.language-option:focus-visible{background:#fff0f2;border-color:#efb4bd;color:#bd1e37;transform:translateY(-1px)}
+.language-option.is-current{background:#c91f3a;color:#fff}
+.language-option:focus-visible{outline:3px solid #efb4bd;outline-offset:2px}
+.language-flag{font-size:18px;line-height:1}
+@media(max-width:1000px){.nav .language-switcher{margin-inline-start:auto;margin-inline-end:8px}.language-option{min-width:48px;padding:0 7px}}
+@media(max-width:420px){.language-switcher{gap:2px;padding:3px}.language-option{min-width:42px;gap:3px;padding:0 5px;font-size:9px}.language-flag{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.language-option{transition:none}.language-option:hover{transform:none}}
