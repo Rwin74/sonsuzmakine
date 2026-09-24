@@ -1,16 +1,16 @@
 export const categories = [
-  {slug:'kuruyemis-kavurma-makineleri',name:'Kuruyemiş Kavurma Makineleri',short:'Bantlı kavurma ve kurutma hatları',intro:'Fındık, badem, yer fıstığı ve farklı kuruyemişler için üretim akışına göre yapılandırılabilen kavurma ve kurutma çözümleri.'},
-  {slug:'kilavuzlu-kavurma-makineleri',name:'Kılavuzlu Kavurma Makineleri',short:'Dönerli kavurma sistemleri',intro:'Parti bazlı kavurma süreçleri için kılavuzlu ve dönerli sistem seçenekleri.'},
+  {slug:'kuruyemis-kavurma-makineleri',name:'Kuruyemiş Kavurma Makineleri',short:'Bantlı kavurma ve kurutma hatları',intro:'Kuruyemiş kavurma makinesi ve bantlı kavurma fırını seçeneklerini; fıstık ve leblebi gibi ürünlerin işlem hedefi, hat akışı ve kapasite ihtiyacına göre değerlendirin. Otomatik tuzlama uygulamasını da sonraki üretim adımıyla birlikte planlayın.'},
+  {slug:'kilavuzlu-kavurma-makineleri',name:'Kılavuzlu Kavurma Makineleri',short:'Dönerli kavurma sistemleri',intro:'Dönerli kavurma makinesi arayan işletmeler için kılavuzlu ve parti tipi fırın seçenekleri; ürün, parti büyüklüğü ve tesis yerleşimine göre karşılaştırılır.'},
   {slug:'kuruyemis-tuzlama-ekipmanlari',name:'Kuruyemiş Tuzlama Ekipmanları',short:'Kaplama ve tatlandırma aşaması',intro:'Kavurma sonrası ürünün tuz ve baharatla homojen buluşmasına yönelik ekipmanlar.'},
   {slug:'kahve-kavurma-makineleri',name:'Kahve Kavurma Makineleri',short:'Kahve çekirdeği için kavurma',intro:'Kahve üretim akışına uygun kavurma makinesi seçenekleri.'},
   {slug:'isitma-yakit-sistemleri',name:'Isıtma ve Yakıt Sistemleri',short:'Hatlara uyumlu ısı çözümleri',intro:'Kavurma hatlarında ısı ihtiyacına göre değerlendirilen yardımcı sistemler.'},
   {slug:'kuruyemis-paketleme-makineleri',name:'Kuruyemiş Paketleme Makineleri',short:'Üretimden paketlemeye',intro:'Kavurma ve işleme sonrasında paketleme aşamasına yönelik makine çözümleri.'},
-  {slug:'elekler',name:'Elekler',short:'Ayırma ve sınıflandırma',intro:'Ürün akışında eleme ve sınıflandırma için kullanılan ekipmanlar.'},
+  {slug:'elekler',name:'Elekler',short:'Ayırma ve sınıflandırma',intro:'Ay çekirdeği eleği ve kuruyemiş eleme çözümlerini ürün boyutu, ayırma hedefi ve hat kapasitesine göre inceleyin; ayıklama konveyörü ve seçme bandı uygulamalarını da karşılaştırın.'},
   {slug:'leblebi-kizartma-makineleri',name:'Leblebi Kızartma Makineleri',short:'Leblebi üretimine özel',intro:'Leblebi işleme ve kızartma süreçlerine yönelik makine seçenekleri.'},
-  {slug:'cekmeli-kuruyemis-firinlari',name:'Çekmeli Kuruyemiş Fırınları',short:'Tepsili fırın çözümleri',intro:'Parti bazlı üretim için çekmeli fırın seçenekleri.'},
+  {slug:'cekmeli-kuruyemis-firinlari',name:'Çekmeli Kuruyemiş Fırınları',short:'Tepsili fırın çözümleri',intro:'Katlı kurutma fırını ve çekmeceli kuruyemiş fırını aramalarında; tepsi düzeni, kurutulacak ürün ve tesis kapasitesi birlikte değerlendirilmelidir. Meyve-sebze kurutma ihtiyacının makine uygunluğunu üreticiyle ayrıca teyit edin.'},
   {slug:'leblebi-seker-makineleri',name:'Leblebi Şeker Makineleri',short:'Şekerleme ekipmanları',intro:'Leblebi şekerleme aşamasında kullanılan makineler.'},
   {slug:'sari-leblebi-imalat-makineleri',name:'Sarı Leblebi İmalat Makineleri',short:'İmalat hattı ekipmanları',intro:'Sarı leblebi üretiminin işlem adımlarına yönelik makine seçenekleri.'},
-  {slug:'secme-bantlari',name:'Seçme Bantları',short:'Görsel kalite kontrol',intro:'Ürün seçme ve ayıklama akışına uyumlu bant sistemleri.'},
+  {slug:'secme-bantlari',name:'Seçme Bantları',short:'Görsel kalite kontrol',intro:'Kuruyemiş seçme bandı ve ayıklama konveyörü seçenekleri; ürün akışı, operatör sayısı, ayıklama adımı ve mevcut eleme hattıyla uyuma göre değerlendirilir.'},
   {slug:'draje-kaplama-makineleri',name:'Draje Kaplama Makineleri',short:'Kaplama prosesleri',intro:'Kuruyemiş ve şekerleme ürünlerinde draje kaplama için makine seçenekleri.'},
   {slug:'fritoz-cips-uretim-makineleri',name:'Fritöz ve Cips Üretim Makineleri',short:'Kızartma üretim hattı',intro:'Cips ve benzeri ürünlerin kızartma aşamasına yönelik ekipmanlar.'}
 ];
