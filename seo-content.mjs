@@ -1,3 +1,4 @@
+import {categories} from './content.mjs';
 // Search phrases are editorial topics, not a meta-keywords tag. Keep these tied to the visible product content.
 const topics = {
   'kuruyemis-kavurma-makineleri':['kuruyemiş kavurma makinesi','bantlı kavurma fırını','leblebi kavurma makinesi','fıstık kavurma fırını','otomatik tuzlamalı kavurma makinesi','endüstriyel kuruyemiş kavurma','kuruyemiş kurutma makinesi','kavurma üretim hattı'],
@@ -26,10 +27,9 @@ const questions = {
 
 export function productTopics(product){
   const base=topics[product.category] || [];
-  const model=product.model.toLocaleLowerCase('tr-TR');
-  const specific=`${product.name.toLocaleLowerCase('tr-TR')} ${/makinesi|fırını|sistemi|bandı|eleği|kazanı/.test(product.name.toLocaleLowerCase('tr-TR'))?'':'modeli'}`.trim();
-  if(product.category==='kuruyemis-kavurma-makineleri') return [...new Set([specific,'ikinci el kavurma makinesi',...base.filter(s=>!s.includes(model)),`${specific} için teklif`])].slice(0,5);
-  return [...new Set([specific,...base.filter(s=>!s.includes(model)),`${specific} için teklif`,`${model} makine modeli`])].slice(0,5);
+  const specific=product.name.toLocaleLowerCase('tr-TR');
+  const family=product.category==='kuruyemis-kavurma-makineleri'?'kuruyemiş kavurma makinesi':(categories.find(c=>c.slug===product.category)?.name||'gıda işleme makinesi').toLocaleLowerCase('tr-TR');
+  return [...new Set([specific,`isteğe göre üretilen ${family}`,`özel üretim ${family}`,`${family} imalatı`,`${specific} için teklif`])].slice(0,5);
 }
 
-export function productGuidance(product){return questions[product.category] || 'İşlenecek ürün, tesis yerleşimi ve üretim hedefi teknik seçim görüşmesinde birlikte ele alınır.'}
+export function productGuidance(product){return `İşlenecek ürün, istenen kavurma veya işleme sonucu, reçete ve tesis koşullarını paylaşın. Makine konfigürasyonu bu ihtiyaçlara göre birlikte belirlenip isteğe göre üretilir.`}

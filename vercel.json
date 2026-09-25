@@ -13,6 +13,9 @@
     { "source": "/assets/catalog/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ],
   "redirects": [
+    { "source": "/bilgi-merkezi/kuruyemis-kavurma-makinesi-kapasite-secimi/", "destination": "/bilgi-merkezi/istege-gore-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/en/bilgi-merkezi/kuruyemis-kavurma-makinesi-kapasite-secimi/", "destination": "/en/bilgi-merkezi/istege-gore-kuruyemis-kavurma-makinesi/", "permanent": true },
+    { "source": "/ar/bilgi-merkezi/kuruyemis-kavurma-makinesi-kapasite-secimi/", "destination": "/ar/bilgi-merkezi/istege-gore-kuruyemis-kavurma-makinesi/", "permanent": true },
     { "source": "/urunlerimiz/", "destination": "/urunler/", "permanent": true },
     { "source": "/contact/", "destination": "/iletisim/", "permanent": true },
     { "source": "/category/kuruyemis-kavurma-makinalari/", "destination": "/urunler/kuruyemis-kavurma-makineleri/", "permanent": true },
