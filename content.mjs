@@ -20,7 +20,7 @@ export const products = [
   {model:'HT 15',slug:'ht-15-kuruyemis-kavurma-makinesi',name:'HT 15 Kuruyemiş Kavurma Makinesi',category:roast,summary:'HT serisinde kuruyemiş kavurma uygulamaları için model.',image:'ht-15.webp'},
   {model:'HT 30',slug:'ht-30-kuruyemis-kavurma-makinesi',name:'HT 30 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma üretim hattı için HT serisi model.',image:'ht-30.webp'},
   {model:'HT 75',slug:'ht-75-kuruyemis-kavurma-makinesi',name:'HT 75 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma ve proses planlamasında değerlendirilebilen HT serisi model.',image:'ht-75.webp'},
-  {model:'HT 150',slug:'ht-150-kavurma-kurutma-makinesi',name:'HT 150 Kavurma ve Kurutma Makinesi',category:roast,summary:'Kavurma ve kurutma prosesleri için HT serisi makine.',image:'ht-150.webp',specs:[['Uzunluk','3350 mm'],['Genişlik','1800 mm'],['Yükseklik','2250 mm']]},
+  {model:'HT 150',slug:'ht-150-kavurma-kurutma-makinesi',name:'HT 150 Kavurma ve Kurutma Makinesi',category:roast,summary:'Kavurma ve kurutma prosesleri için HT serisi makine.',image:'ht-150.webp'},
   {model:'HT 500',slug:'ht-500-kavurma-kurutma-makinesi',name:'HT 500 Kavurma ve Kurutma Makinesi',category:roast,summary:'Kavurma ve kurutma hatlarında kullanılan HT serisi model.',image:'ht-500.webp'},
   {model:'HT 750',slug:'ht-750-kuruyemis-kavurma-makinesi',name:'HT 750 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma uygulamaları için HT serisi model.',image:'ht-750.webp'},
   {model:'HT 1000',slug:'ht-1000-kuruyemis-kavurma-makinesi',name:'HT 1000 Kuruyemiş Kavurma Makinesi',category:roast,summary:'Kuruyemiş kavurma hatları için HT serisi model.',image:'ht-1000.webp'},
