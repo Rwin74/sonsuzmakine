@@ -84,7 +84,14 @@ en: {
     ['Connect batch targets to daily output','Warm-up, roasting, discharge, cooling and product changes matter as much as batch size. State the target as daily roasted-bean output. Do not derive shift capacity from a single batch figure.'],
     ['Ask how profiles are repeated','The supplier should demonstrate how temperature and time are recorded, which settings the operator can adjust and how a recipe is repeated on the next batch. During trials, record bean type and starting conditions.'],
     ['Plan cooling and the next operation','After roasting, cooling, holding, grinding or packaging depends on the product strategy. Consider the speed and space requirements of these stations alongside the roaster choice.'],
-    ['Verify technical suitability','The Sonsuz Makina catalogue lists an HT 30 coffee-roasting model. Request a current technical sheet and a trial with representative beans to confirm capacity, heat source, control options and site suitability.']
+    ['Verify technical suitability','The Sonsuz Makina e-catalogue lists a coffee-roasting model under code HT 30 CR; the website product code has been aligned with the catalogue. Request a current technical sheet and a trial with representative beans to confirm the heating, control options and site suitability.']
+  ]},
+  'bantli-donerli-kavurma-makinesi-secimi': {title:'Belt-Type or Rotary Nut Roaster? A Selection Guide',desc:'Compare belt-type and rotary roasting machines through product trials, plant layout, technical drawings and quotation scope.',sections:[
+    ['Match the machine type to the product goal first','The Sonsuz Makina e-catalogue lists belt-type and rotary-type roasting machines in separate groups. The machine name alone does not establish product suitability or the expected result. Describe the product, shell condition, desired colour and texture, product-change frequency and next process steps in the same enquiry.'],
+    ['Use a sample trial as a selection criterion','Prepare a representative raw-material sample and an example of the acceptable finished product. Agree with the manufacturer in advance which settings and outcomes will be recorded during the trial. Do not treat a general description that has not been checked with your sample as a purchase guarantee.'],
+    ['Compare the layout with the current technical drawing','Overall dimensions in the e-catalogue can support an initial space check. Confirm doors and transport routes, operator access, cleaning and maintenance clearances, and existing line connections against the current order drawing. Do not assume catalogue dimensions are the final external dimensions of a made-to-order machine.'],
+    ['Ask about heating and auxiliary systems together','Use the heating types and technical values shown for each catalogue model as a starting reference. List electrical or fuel connections, ventilation, feeding, cooling and transfer needs separately in the quotation. Confirm final suitability against site conditions and the current technical sheet.'],
+    ['Compare quotations on the same scope','Compare the machine, included equipment, installation responsibilities, delivery, training and trial acceptance criteria for both options under the same headings. A trial with your product and a made-to-order technical drawing should form the basis of the decision.']
   ]}
 },
 ar: {
@@ -170,7 +177,14 @@ ar: {
     ['اربط هدف الدفعة بالإنتاج اليومي','تكتسب أوقات الإحماء والتحميص والتفريغ والتبريد وتبديل المنتج أهمية تماثل حجم الدفعة. اذكر هدفك على أنه إنتاج الحبوب المحمصة يومياً. ولا تستنتج طاقة الوردية من رقم دفعة واحدة.'],
     ['اسأل عن تكرار ملف التحميص','ينبغي أن يوضح المورد طريقة تسجيل الحرارة والوقت والإعدادات التي يمكن للمشغل تعديلها وكيفية تكرار الوصفة في الدفعة التالية. سجّل نوع الحبوب وظروفها الأولية أثناء التجربة.'],
     ['خطط للتبريد والعملية التالية','تعتمد خطوات التبريد والانتظار والطحن أو التعبئة بعد التحميص على استراتيجية المنتج. ينبغي التفكير في سرعة هذه المحطات ومساحتها مع اختيار المحمصة.'],
-    ['تحقق من الملاءمة الفنية','يضم كتالوج سونوز ماكينة طراز تحميص القهوة HT 30. اطلب ورقة فنية حديثة وتجربة بحبوب ممثلة للتحقق من الطاقة ومصدر الحرارة وخيارات التحكم وملاءمة الموقع.']
+    ['تحقق من الملاءمة الفنية','يعرض الكتالوج الإلكتروني لسونوز ماكينة طرازاً لتحميص القهوة بالرمز HT 30 CR، وقد وُحّد رمز المنتج في الموقع مع الكتالوج. اطلب ورقة فنية حديثة وتجربة بحبوب ممثلة للتحقق من التدفئة وخيارات التحكم وملاءمة الموقع.']
+  ]},
+  'bantli-donerli-kavurma-makinesi-secimi': {title:'محمصة المكسرات بالسير أم الدوارة؟ دليل الاختيار',desc:'قارن بين آلات التحميص بالسير والدوارة من خلال تجربة المنتج وتخطيط المصنع والرسم الفني ونطاق العرض.',sections:[
+    ['ابدأ بمواءمة نوع الآلة مع المنتج والنتيجة المطلوبة','يعرض كتالوج سونوز ماكينة آلات التحميص بالسير والآلات الدوارة ضمن مجموعتين منفصلتين. لا يكفي اسم الآلة وحده لتحديد ملاءمتها للمنتج أو النتيجة المتوقعة. اذكر نوع المنتج وحالة القشرة واللون والقوام المطلوبين وتكرار تغيير المنتج وخطوات المعالجة التالية في طلب واحد.'],
+    ['اجعل تجربة العينة معياراً للاختيار','جهّز عينة ممثلة من المادة الخام ونموذجاً للمنتج النهائي المقبول. اتفق مسبقاً مع الشركة المصنّعة على الإعدادات والنتائج التي ستُسجّل أثناء التجربة. لا تعتبر وصفاً عاماً لم يُختبر على عينتك ضماناً للشراء.'],
+    ['قارن مخطط المكان بالرسم الفني الأحدث','تساعد الأبعاد العامة في الكتالوج على التحقق الأولي من المساحة. أكّد مسارات الأبواب والنقل ووصول المشغل ومساحات التنظيف والصيانة ووصلات خط الإنتاج على رسم الطلب الأحدث. لا تفترض أن أبعاد الكتالوج هي الأبعاد النهائية لآلة تُصنع حسب الطلب.'],
+    ['اسأل عن التدفئة والمعدات المساعدة معاً','استخدم أنواع التدفئة والقيم الفنية الظاهرة لكل طراز في الكتالوج كمرجع أولي. أدرج التوصيلات الكهربائية أو الوقود والتهوية والتغذية والتبريد والنقل كلّاً على حدة في العرض. أكّد الملاءمة النهائية وفق ظروف الموقع وورقة المواصفات الحديثة.'],
+    ['قارن العروض ضمن النطاق نفسه','قارن الآلة والمعدات المشمولة ومسؤوليات التركيب والتسليم والتدريب ومعايير قبول التجربة للخيارين تحت العناوين نفسها. ينبغي أن تستند النتيجة إلى تجربة بمنتجك ورسم فني خاص بالطلب.']
   ]}
 }
 };

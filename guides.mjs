@@ -132,8 +132,19 @@ export const newGuides = [
       ['Parti hedefini günlük çıktıya bağlayın','Tek parti kapasitesi kadar ısınma, kavurma, boşaltma, soğutma ve ürün değişimi süreleri önemlidir. Hedefinizin günlük kavrulmuş çekirdek çıktısı olduğunu yazın. Tek bir parti rakamından vardiya kapasitesi türetmeyin.'],
       ['Tekrarlanabilir profili sorgulayın','Sıcaklık ve zaman kayıtlarının nasıl tutulduğu, operatörün hangi ayarlara müdahale edebildiği ve reçetenin sonraki partide nasıl tekrarlandığı gösterilmelidir. Deneme değerlendirmesinde çekirdek türü ve başlangıç koşullarını kayda alın.'],
       ['Soğutma ve sonraki adımı planlayın','Kavurma çıkışından sonra soğutma, bekleme, öğütme veya paketleme sırası işletmenin ürün stratejisine bağlıdır. Bu istasyonların hızı ve alan ihtiyacı makine seçimiyle birlikte düşünülmelidir.'],
-      ['Teknik uygunluğu doğrulayın','Sonsuz Makina kataloğunda HT 30 kahve kavurma modeli bulunur. Güncel kapasite, ısı kaynağı, kontrol seçenekleri ve tesis uyumu için üreticiden teknik föy ve temsilî çekirdek denemesi isteyin.']
+      ['Teknik uygunluğu doğrulayın','Sonsuz Makina e-kataloğunda HT 30 CR kodlu kahve kavurma modeli listelenir; web sitesindeki ürün kodu katalogla eşleşecek şekilde güncellenmiştir. Güncel ısıtma, kontrol seçenekleri ve tesis uyumu için teknik föy ve temsilî çekirdek denemesi isteyin.']
     ],links:[['HT 30 kahve kavurma makinesi','/urunler/ht-30-kahve-kavurma-makinesi/'],['Tüm kahve kavurma makineleri','/urunler/kahve-kavurma-makineleri/']]
+  },
+  {
+    slug:'bantli-donerli-kavurma-makinesi-secimi',title:'Bantlı mı Dönerli mi? Kuruyemiş Kavurma Makinesi Seçim Rehberi',
+    desc:'Bantlı ve dönerli kavurma makinesi seçeneklerini ürün denemesi, tesis yerleşimi, teknik çizim ve teklif kapsamıyla karşılaştırın.',date:'2026-09-29',
+    sections:[
+      ['Önce makine tipini ve ürün hedefini eşleştirin','Sonsuz Makina e-kataloğu bantlı tip ve dönerli tip kavurma makinelerini ayrı gruplarda listeler. Makine adından tek başına ürün uygunluğu ya da sonuç çıkarmayın. İşlenecek ürünü, kabuk durumunu, beklenen renk ve dokuyu, ürün değişim sıklığını ve sonraki işlem adımlarını aynı talepte tarif edin.'],
+      ['Numune denemesini seçim ölçütü yapın','Temsilî hammaddeden numune ve kabul edilebilir son üründen örnek hazırlayın. Denemede hangi ayarların ve sonuçların kaydedileceğini üreticiyle baştan belirleyin. Ürün numunesiyle doğrulanmayan genel bir açıklamayı satın alma garantisi gibi değerlendirmeyin.'],
+      ['Yerleşimi gerçek teknik çizimle karşılaştırın','E-katalogdaki genel ölçüler ilk alan kontrolüne yardımcı olur. Kapı ve taşıma güzergâhı, operatör erişimi, temizlik ve bakım alanı ile mevcut hat bağlantılarını güncel sipariş çizimi üzerinde doğrulayın. Katalog ölçüsünü özel üretim makinenin kesin dış ölçüsü kabul etmeyin.'],
+      ['Isıtma ve yardımcı sistemleri birlikte sorun','Katalogdaki model satırlarında görünen ısıtma türünü ve teknik değerleri başlangıç referansı olarak alın. Elektrik veya yakıt altyapısı, havalandırma, besleme, soğutma ve transfer ihtiyaçlarını teklif kapsamına ayrı ayrı yazdırın. Nihai uygunluğu tesis koşulları ve güncel teknik föyle doğrulayın.'],
+      ['Teklifleri aynı kapsamla karşılaştırın','Her iki seçenek için makineyi, dahil ekipmanı, kurulum sorumluluğunu, teslimi, eğitimi ve deneme kabul ölçütünü aynı başlıklarda karşılaştırın. Kendi ürününüzle yapılan deneme ve siparişe özel teknik çizim, kararın temelini oluşturmalıdır.']
+    ],links:[['Bantlı kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Dönerli kılavuzlu kavurma makineleri','/urunler/kilavuzlu-kavurma-makineleri/'],['Kaynak e-kataloğu (PDF)','/assets/catalog/sonsuz-makina-katalog-v2.pdf'],['Teklif için iletişim','/iletisim/']]
   }
 ];
 

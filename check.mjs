@@ -30,7 +30,15 @@ for(const product of products){
   const html=fs.readFileSync(path.join(root,'urunler',product.slug,'index.html'),'utf8');
   const topics=productTopics(product);
   if(topics.length!==5||new Set(topics).size!==5)errors.push(`${product.slug}: beş benzersiz arama niyeti yok.`);
-  for(const topic of topics)if(!html.includes(topic.replaceAll('&','&amp;')))errors.push(`${product.slug}: görünür terim eksik: ${topic}`);
+  if(!html.includes(product.name))errors.push(`${product.slug}: ürün adı sayfa içeriğinde görünmüyor.`);
+  if(html.includes('isteğe göre üretilen')||html.includes('özel üretim')&&html.includes('<ul>'))errors.push(`${product.slug}: tekrar eden anahtar kelime listesi kullanıcı metnine taşmış.`);
+}
+for(const locale of ['en','ar']){
+ const slug='bantli-donerli-kavurma-makinesi-secimi';
+ const html=fs.readFileSync(path.join(root,locale,'bilgi-merkezi',slug,'index.html'),'utf8');
+ const guide=localizedGuides[locale][slug];
+ if(!guide||guide.sections.length!==5)errors.push(`${locale}/${slug}: eksiksiz çeviri eksik.`);
+ else for(const [heading,body] of guide.sections)if(!html.includes(heading)||!html.includes(body))errors.push(`${locale}/${slug}: tam çevrilmiş bölüm eksik: ${heading}`);
 }
 for(const locale of ['en','ar'])for(const [slug,guide] of Object.entries(localizedGuides[locale])){
   const html=fs.readFileSync(path.join(root,locale,'bilgi-merkezi',slug,'index.html'),'utf8');
