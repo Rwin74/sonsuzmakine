@@ -145,6 +145,17 @@ export const newGuides = [
       ['Isıtma ve yardımcı sistemleri birlikte sorun','Katalogdaki model satırlarında görünen ısıtma türünü ve teknik değerleri başlangıç referansı olarak alın. Elektrik veya yakıt altyapısı, havalandırma, besleme, soğutma ve transfer ihtiyaçlarını teklif kapsamına ayrı ayrı yazdırın. Nihai uygunluğu tesis koşulları ve güncel teknik föyle doğrulayın.'],
       ['Teklifleri aynı kapsamla karşılaştırın','Her iki seçenek için makineyi, dahil ekipmanı, kurulum sorumluluğunu, teslimi, eğitimi ve deneme kabul ölçütünü aynı başlıklarda karşılaştırın. Kendi ürününüzle yapılan deneme ve siparişe özel teknik çizim, kararın temelini oluşturmalıdır.']
     ],links:[['Bantlı kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Dönerli kılavuzlu kavurma makineleri','/urunler/kilavuzlu-kavurma-makineleri/'],['Kaynak e-kataloğu (PDF)','/assets/catalog/sonsuz-makina-katalog-v2.pdf'],['Teklif için iletişim','/iletisim/']]
+  },
+  {
+    slug:'denizli-kuruyemis-makinesi-imalati',title:'Denizli Kuruyemiş Makinesi İmalatı: Teklif Süreci Nasıl İlerler?',
+    desc:'Denizli’de kuruyemiş kavurma makinesi üreticisi arayan işletmeler için ihtiyaç tanımı, teknik görüşme, numune ve siparişe özel teklif adımları.',date:'2026-09-29',
+    sections:[
+      ['İhtiyacı makine adından önce tarif edin','İşlenecek ürünü, hedeflediğiniz kavurma niteliğini, mevcut üretim adımlarını ve yeni makinenin hatta nerede çalışacağını belirtin. Makine tipi seçimi bu bilgilerle yapılır; yalnızca genel ürün adına bakarak uygunluk kararı vermek doğru olmaz.'],
+      ['Güncel teknik bilgiyi birlikte netleştirin','Sonsuz Makina e-kataloğunda farklı makine aileleri ve modeller yer alır. İlgilendiğiniz model kodunu, tesis yerleşimini ve mevcut bağlantıları paylaşın. Ölçü ve konfigürasyon siparişe özel güncel teknik çizim üzerinden teyit edilmelidir.'],
+      ['Numune ve kabul ölçütünü baştan konuşun','Mümkünse temsilî ürün numunesi ve beklediğiniz son ürünü görüşmeye ekleyin. Deneme yapılacaksa hangi özelliklerin değerlendirileceğini ve sonucun nasıl kaydedileceğini önceden yazılı netleştirin. Doğrulanmamış performans iddialarını teklif şartı gibi kabul etmeyin.'],
+      ['Teklifleri aynı kapsam üzerinden karşılaştırın','Makine kapsamı, yardımcı ekipmanlar, tesis bağlantıları, teslim ve kurulum sorumluluğu, eğitim ve kabul adımlarını ayrı ayrı isteyin. Böylece farklı tekliflerde nelerin dahil olduğunu eşit biçimde görebilirsiniz.'],
+      ['Denizli’de görüşmeye hazırlanın','Sonsuz Makina, Gıda ve Toptancılar Sitesi, 7133. Sokak No: 5, Bozburun Mahallesi, Merkezefendi / Denizli adresindedir. İlk görüşme için ürününüzü, hedeflediğiniz sonucu, mevcut yerleşim bilgisini ve varsa katalog modelini iletmeniz yeterlidir.']
+    ],links:[['Kuruyemiş kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['E-katalog ve teknik bilgiler','/e-katalog/'],['Teklif için iletişim','/iletisim/']]
   }
 ];
 

@@ -92,6 +92,13 @@ en: {
     ['Compare the layout with the current technical drawing','Overall dimensions in the e-catalogue can support an initial space check. Confirm doors and transport routes, operator access, cleaning and maintenance clearances, and existing line connections against the current order drawing. Do not assume catalogue dimensions are the final external dimensions of a made-to-order machine.'],
     ['Ask about heating and auxiliary systems together','Use the heating types and technical values shown for each catalogue model as a starting reference. List electrical or fuel connections, ventilation, feeding, cooling and transfer needs separately in the quotation. Confirm final suitability against site conditions and the current technical sheet.'],
     ['Compare quotations on the same scope','Compare the machine, included equipment, installation responsibilities, delivery, training and trial acceptance criteria for both options under the same headings. A trial with your product and a made-to-order technical drawing should form the basis of the decision.']
+  ]},
+  'denizli-kuruyemis-makinesi-imalati': {title:'Nut Processing Machinery Made in Denizli: What to Include in an Enquiry',desc:'For businesses seeking a nut roasting machine manufacturer in Denizli, a practical guide to defining requirements, technical discussions, samples and made-to-order quotations.',sections:[
+    ['Describe the need before choosing a machine name','State the product to be processed, the roasting result you want, the current production steps and where the new machine will fit in the line. Machine type should follow these details; a general product label alone cannot establish suitability.'],
+    ['Confirm current technical information together','The Sonsuz Makina e-catalogue lists different machine families and models. Share the model code of interest, plant layout and available connections. Dimensions and configuration should be confirmed against the current made-to-order technical drawing.'],
+    ['Discuss samples and acceptance criteria early','Where possible, include a representative product sample and an example of the result you expect. If a trial is planned, agree in writing which characteristics will be evaluated and how the result will be recorded. Treat unverified performance claims as unconfirmed until tested.'],
+    ['Compare quotations on the same scope','Request separate details for machine scope, auxiliary equipment, site connections, delivery and installation responsibilities, training and acceptance steps. This makes it easier to compare what each supplier includes.'],
+    ['Prepare for a meeting in Denizli','Sonsuz Makina is located at Gida ve Toptancilar Sitesi, 7133 Sokak No: 5, Bozburun Mahallesi, Merkezefendi, Denizli. For an initial discussion, share the product, intended result, available layout information and any catalogue model you have in mind.']
   ]}
 },
 ar: {
@@ -185,6 +192,13 @@ ar: {
     ['قارن مخطط المكان بالرسم الفني الأحدث','تساعد الأبعاد العامة في الكتالوج على التحقق الأولي من المساحة. أكّد مسارات الأبواب والنقل ووصول المشغل ومساحات التنظيف والصيانة ووصلات خط الإنتاج على رسم الطلب الأحدث. لا تفترض أن أبعاد الكتالوج هي الأبعاد النهائية لآلة تُصنع حسب الطلب.'],
     ['اسأل عن التدفئة والمعدات المساعدة معاً','استخدم أنواع التدفئة والقيم الفنية الظاهرة لكل طراز في الكتالوج كمرجع أولي. أدرج التوصيلات الكهربائية أو الوقود والتهوية والتغذية والتبريد والنقل كلّاً على حدة في العرض. أكّد الملاءمة النهائية وفق ظروف الموقع وورقة المواصفات الحديثة.'],
     ['قارن العروض ضمن النطاق نفسه','قارن الآلة والمعدات المشمولة ومسؤوليات التركيب والتسليم والتدريب ومعايير قبول التجربة للخيارين تحت العناوين نفسها. ينبغي أن تستند النتيجة إلى تجربة بمنتجك ورسم فني خاص بالطلب.']
+  ]},
+  'denizli-kuruyemis-makinesi-imalati': {title:'تصنيع آلات المكسرات في دنيزلي: ما الذي يتضمنه طلب العرض؟',desc:'دليل عملي للشركات التي تبحث عن مصنع آلات تحميص المكسرات في دنيزلي، من تحديد الاحتياج إلى النقاش الفني والعينة والعرض المصنّع حسب الطلب.',sections:[
+    ['صف الاحتياج قبل اختيار اسم الآلة','اذكر المنتج المراد معالجته ونتيجة التحميص المطلوبة وخطوات الإنتاج الحالية ومكان الآلة الجديدة في الخط. ينبغي أن يعتمد اختيار نوع الآلة على هذه المعلومات؛ فاسم المنتج وحده لا يثبت الملاءمة.'],
+    ['أكّد المعلومات الفنية الحديثة معاً','يعرض كتالوج سونوز ماكينة الإلكتروني عائلات وطرازات مختلفة. أرسل رمز الطراز الذي تهتم به ومخطط الموقع والتوصيلات المتاحة. يجب تأكيد الأبعاد والتكوين وفق الرسم الفني الحديث للآلة المصنّعة حسب الطلب.'],
+    ['ناقش العينة ومعايير القبول مبكراً','إن أمكن، أرفق عينة ممثلة من المنتج ونموذجاً للنتيجة التي تتوقعها. وإذا خُطط لإجراء تجربة، فاتفقوا كتابةً على الخصائص التي ستُقيّم وكيفية تسجيل النتيجة. اعتبر ادعاءات الأداء غير المؤكدة بحاجة إلى اختبار.'],
+    ['قارن العروض ضمن النطاق نفسه','اطلب تفاصيل منفصلة عن نطاق الآلة والمعدات المساعدة وتوصيلات الموقع ومسؤوليات التسليم والتركيب والتدريب وخطوات القبول. يساعد ذلك على معرفة ما يتضمنه كل عرض ومقارنته بالآخر.'],
+    ['استعد للاجتماع في دنيزلي','يقع سونوز ماكينة في موقع تجار المواد الغذائية، 7133 سوكاك رقم 5، حي بوزبورون، مركز أفندي، دنيزلي. للاجتماع الأولي، أرسل نوع المنتج والنتيجة المطلوبة ومعلومات الموقع المتاحة ورمز أي طراز في الكتالوج تفكر فيه.']
   ]}
 }
 };
