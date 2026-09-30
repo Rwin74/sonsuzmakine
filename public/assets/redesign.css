@@ -1,5 +1,6 @@
 :root{--ink:#102a4b;--dark:#071d38;--mint:#e1223d;--paper:#f7f9fc;--muted:#627188;--line:#dce3ec}
 html{scroll-behavior:smooth}
+.article-byline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin:22px 0 30px;padding-bottom:18px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}.article-byline a{color:var(--ink);font-weight:700;text-decoration:none}.article-byline a:hover{text-decoration:underline}.article-byline time{font-variant-numeric:tabular-nums}.editorial-basis{margin:26px 0;padding:20px 24px;border-left:3px solid var(--mint);background:#f1f5fa;color:var(--ink)}.editorial-basis p{margin:8px 0 0;line-height:1.7;color:var(--muted)}html[dir=rtl] .editorial-basis{border-left:0;border-right:3px solid var(--mint)}
 body{font-family:"Segoe UI Variable","Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink)}
 .brand-name,.brand-symbol,.eyebrow,.hero h1,.page-intro h1,.prose-page h1,.section h2,.dark-section h2,.insight-section h2,.spec-section h2,.category-card h3,.product-info h3,.article-card h3,.article-card h2,.contact-panel h2,.contact-guide h2,.cta-band h2,.footer-grid b,.hero-meta b{font-family:"Segoe UI Variable","Segoe UI",Arial,sans-serif}
 .brand-symbol{background:var(--dark);color:#fff;border-radius:3px}.brand-symbol span{background:var(--mint);color:#fff;border-radius:2px}
