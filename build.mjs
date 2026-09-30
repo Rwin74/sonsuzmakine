@@ -79,7 +79,8 @@ function write(route,html){
   }
   const categorySlug=product?.category||category?.slug;
   const guideMap={
-    'kuruyemis-kavurma-makineleri':['kuruyemis-kavurma-makinesi-secimi','kuruyemis-kavurma-makinesi-fiyati','kuruyemis-kavurma-makinesi-teklif-talebi','kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu','bantli-donerli-kavurma-makinesi-secimi','istege-gore-kuruyemis-kavurma-makinesi'],
+    'kuruyemis-kavurma-makineleri':['kuruyemis-kavurma-makinesi-secimi','kuruyemis-kavurma-makinesi-fiyati','kuruyemis-kavurma-makinesi-teklif-talebi','kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu','kuruyemis-kavurma-makinesi-numune-denemesi','bantli-donerli-kavurma-makinesi-secimi','istege-gore-kuruyemis-kavurma-makinesi'],
+    'elekler':['kuruyemis-eleme-makinesi-secimi'],
     'kilavuzlu-kavurma-makineleri':['kuruyemis-kavurma-makinesi-secimi','elektrikli-dogalgazli-kavurma-makinesi-secimi'],
     'kuruyemis-paketleme-makineleri':['kuruyemis-paketleme-makinesi-gramaj-secimi','kuruyemis-uretim-hatti-planlama'],
     'kahve-kavurma-makineleri':['kahve-kavurma-makinesi-secimi'],

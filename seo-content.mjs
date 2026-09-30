@@ -16,6 +16,8 @@ const guideImageMap={
   'draje-kaplama-makinesi-secimi':'draje-kaplama-sistemi.webp',
   'kahve-kavurma-makinesi-secimi':'ht-30-kahve.webp',
   'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu':'ht-100-kilavuzlu-kavurma-firini.webp'
+  ,'kuruyemis-kavurma-makinesi-numune-denemesi':'ht-150.webp'
+  ,'kuruyemis-eleme-makinesi-secimi':'elek.webp'
 };
 
 export function guideImage(slug){return guideImageMap[slug]||'ht-150.webp'}

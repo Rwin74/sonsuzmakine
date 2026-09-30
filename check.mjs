@@ -3,6 +3,7 @@ import path from 'node:path';
 import {products,articles} from './content.mjs';
 import {productTopics} from './seo-content.mjs';
 import {localizedGuides} from './localized-guides.mjs';
+import {expandedGuides,newGuides} from './guides.mjs';
 const root=path.resolve('dist');
 if(!fs.existsSync(root))throw Error('Önce node build.mjs çalıştırın.');
 const pages=[];
@@ -38,7 +39,7 @@ for(const product of products){
   if(!html.includes(product.name))errors.push(`${product.slug}: ürün adı sayfa içeriğinde görünmüyor.`);
   if(html.includes('isteğe göre üretilen')||html.includes('özel üretim')&&html.includes('<ul>'))errors.push(`${product.slug}: tekrar eden anahtar kelime listesi kullanıcı metnine taşmış.`);
 }
-for(const article of articles)for(const locale of ['tr','en','ar']){
+for(const article of [...articles.map(a=>({...a,...expandedGuides[a.slug]})),...newGuides])for(const locale of ['tr','en','ar']){
   const prefix=locale==='tr'?'':`${locale}/`;
   const html=fs.readFileSync(path.join(root,prefix,'bilgi-merkezi',article.slug,'index.html'),'utf8');
   const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(([,raw])=>JSON.parse(raw));
@@ -47,6 +48,11 @@ for(const article of articles)for(const locale of ['tr','en','ar']){
   if(!organization?.sameAs?.includes('https://www.instagram.com/makinasonsuz/')||!organization?.sameAs?.includes('https://www.youtube.com/@sonsuzmakina')||!organization?.sameAs?.includes('https://www.linkedin.com/in/sonsuzmakina/'))errors.push(`${locale}/${article.slug}: Organization sameAs profilleri eksik.`);
   if(!structuredArticle?.datePublished||!structuredArticle?.dateModified||structuredArticle.author?.['@id']!=='https://www.sonsuzmakina.com/#organization')errors.push(`${locale}/${article.slug}: Article yazarı veya tarih işaretlemesi eksik.`);
   if(!html.includes('class="article-byline"')||!html.includes(`datetime="${article.date}"`)||!html.includes('editorial-basis'))errors.push(`${locale}/${article.slug}: görünür yazar, yayın tarihi veya hazırlama yöntemi eksik.`);
+  if(locale!=='tr'){
+    const translated=localizedGuides[locale][article.slug];
+    if(!translated||translated.sections.length!==article.sections.length)errors.push(`${locale}/${article.slug}: tam rehber çevirisi eksik.`);
+    else for(const [heading,body] of translated.sections)if(!html.includes(heading)||!html.includes(body))errors.push(`${locale}/${article.slug}: çevrilmiş rehber bölümü eksik: ${heading}`);
+  }
 }
 for(const locale of ['en','ar']){
  const slug='bantli-donerli-kavurma-makinesi-secimi';
