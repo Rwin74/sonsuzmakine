@@ -47,6 +47,20 @@ for(const locale of ['en','ar'])for(const [slug,guide] of Object.entries(localiz
   const videoStyle=html.match(/<style>([\s\S]*?)<\/style>/)?.[1]||'';
   if(!videoStyle.includes('aspect-ratio:16/10')||!videoStyle.includes('position:absolute'))errors.push(`${locale}/${slug}: video çerçevesi uyarlaması eksik`);
 }
+for(const slug of ['kuruyemis-kavurma-makinesi-teklif-talebi','kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu'])for(const locale of ['tr','en','ar']){
+  const prefix=locale==='tr'?'':`${locale}/`;
+  const file=path.join(root,prefix,'bilgi-merkezi',slug,'index.html');
+  const html=fs.readFileSync(file,'utf8');
+  const article=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(([,raw])=>JSON.parse(raw)).find(x=>x['@type']==='Article');
+  if(!article?.image?.length)errors.push(`${locale}/${slug}: Article schema görseli eksik.`);
+  else {const imagePath=decodeURIComponent(new URL(article.image[0]).pathname).replace(/^\//,'');if(!fs.existsSync(path.join(root,imagePath)))errors.push(`${locale}/${slug}: Article schema görseli dosyada yok.`)}
+  if(!html.includes('property="og:image"'))errors.push(`${locale}/${slug}: paylaşım görseli eksik.`);
+}
+const roastCategory=fs.readFileSync(path.join(root,'urunler','kuruyemis-kavurma-makineleri','index.html'),'utf8');
+for(const slug of ['kuruyemis-kavurma-makinesi-teklif-talebi','kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu']){
+  if(!home.includes(`/bilgi-merkezi/${slug}/`))errors.push(`Ana sayfada öne çıkan rehber bağlantısı eksik: ${slug}`);
+  if(!roastCategory.includes(`/bilgi-merkezi/${slug}/`))errors.push(`Kavurma kategorisinde ilgili rehber bağlantısı eksik: ${slug}`);
+}
 for(const asset of ['assets/sonsuz-logo.svg','assets/hero/uretim-video.jpg','assets/hero/sonsuz-makina-uretim-v2.mp4','assets/catalog/sonsuz-makina-katalog-v2.pdf'])if(!fs.existsSync(path.join(root,asset)))errors.push(`Temel varlık eksik: ${asset}`);
 if(!home.includes('class="video-slot"')||home.includes('<iframe'))errors.push('Ana sayfa videosu ilk yüklemede harici oynatıcıya bağlı.');
 if(!fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').includes('<video:video>'))errors.push('Video sitemap girdisi eksik.');

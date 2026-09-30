@@ -9,3 +9,13 @@ export function productTopics(product){
 }
 
 export function productGuidance(product){return `İşlenecek ürün, istenen kavurma veya işleme sonucu, reçete ve tesis koşullarını paylaşın. Makine konfigürasyonu bu ihtiyaçlara göre birlikte belirlenip isteğe göre üretilir.`}
+
+const guideImageMap={
+  'kuruyemis-paketleme-makinesi-gramaj-secimi':'dort-kefeli-otomatik-paketleme-makinesi.webp',
+  'leblebi-uretim-hatti-makineleri':'leblebi-kavurma-makinesi.webp',
+  'draje-kaplama-makinesi-secimi':'draje-kaplama-sistemi.webp',
+  'kahve-kavurma-makinesi-secimi':'ht-30-kahve.webp',
+  'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu':'ht-100-kilavuzlu-kavurma-firini.webp'
+};
+
+export function guideImage(slug){return guideImageMap[slug]||'ht-150.webp'}

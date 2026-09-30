@@ -136,7 +136,7 @@ export const newGuides = [
     ],links:[['HT 30 kahve kavurma makinesi','/urunler/ht-30-kahve-kavurma-makinesi/'],['Tüm kahve kavurma makineleri','/urunler/kahve-kavurma-makineleri/']]
   },
   {
-    slug:'bantli-donerli-kavurma-makinesi-secimi',title:'Bantlı mı Dönerli mi? Kuruyemiş Kavurma Makinesi Seçim Rehberi',
+    slug:'bantli-donerli-kavurma-makinesi-secimi',title:'Bantlı mı Dönerli mi? Kuruyemiş Kavurma Makinesi Seçim Rehberi',seoTitle:'Bantlı mı Dönerli Kuruyemiş Kavurma?',
     desc:'Bantlı ve dönerli kavurma makinesi seçeneklerini ürün denemesi, tesis yerleşimi, teknik çizim ve teklif kapsamıyla karşılaştırın.',date:'2026-09-29',
     sections:[
       ['Önce makine tipini ve ürün hedefini eşleştirin','Sonsuz Makina e-kataloğu bantlı tip ve dönerli tip kavurma makinelerini ayrı gruplarda listeler. Makine adından tek başına ürün uygunluğu ya da sonuç çıkarmayın. İşlenecek ürünü, kabuk durumunu, beklenen renk ve dokuyu, ürün değişim sıklığını ve sonraki işlem adımlarını aynı talepte tarif edin.'],
@@ -147,7 +147,7 @@ export const newGuides = [
     ],links:[['Bantlı kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Dönerli kılavuzlu kavurma makineleri','/urunler/kilavuzlu-kavurma-makineleri/'],['Kaynak e-kataloğu (PDF)','/assets/catalog/sonsuz-makina-katalog-v2.pdf'],['Teklif için iletişim','/iletisim/']]
   },
   {
-    slug:'denizli-kuruyemis-makinesi-imalati',title:'Denizli Kuruyemiş Makinesi İmalatı: Teklif Süreci Nasıl İlerler?',
+    slug:'denizli-kuruyemis-makinesi-imalati',title:'Denizli Kuruyemiş Makinesi İmalatı: Teklif Süreci Nasıl İlerler?',seoTitle:'Denizli’de Kavurma Makinesi Teklif Rehberi',
     desc:'Denizli’de kuruyemiş kavurma makinesi üreticisi arayan işletmeler için ihtiyaç tanımı, teknik görüşme, numune ve siparişe özel teklif adımları.',date:'2026-09-29',
     sections:[
       ['İhtiyacı makine adından önce tarif edin','İşlenecek ürünü, hedeflediğiniz kavurma niteliğini, mevcut üretim adımlarını ve yeni makinenin hatta nerede çalışacağını belirtin. Makine tipi seçimi bu bilgilerle yapılır; yalnızca genel ürün adına bakarak uygunluk kararı vermek doğru olmaz.'],
@@ -158,7 +158,7 @@ export const newGuides = [
     ],links:[['Kuruyemiş kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['E-katalog ve teknik bilgiler','/e-katalog/'],['Teklif için iletişim','/iletisim/']]
   },
   {
-    slug:'kuruyemis-kavurma-makinesi-teklif-talebi',title:'Kuruyemiş Kavurma Makinesi Teklifi: Üreticiye Hangi Bilgiler Gönderilmeli?',
+    slug:'kuruyemis-kavurma-makinesi-teklif-talebi',title:'Kuruyemiş Kavurma Makinesi Teklifi: Üreticiye Hangi Bilgiler Gönderilmeli?',seoTitle:'Kuruyemiş Kavurma Makinesi Teklifi',
     desc:'İhtiyacınızı doğru anlatan bir kuruyemiş kavurma makinesi teklif talebi hazırlayın: ürün, hedef sonuç, tesis, makine tipi ve sipariş kapsamı için pratik kontrol listesi.',date:'2026-09-30',
     sections:[
       ['Ürünü ve hedeflenen sonucu açıklayın','Talepte işlenecek ürünün adını, mevcut hazırlama biçimini ve hedeflediğiniz kavurma niteliğini belirtin. Ürün türünü değiştirdiğinizde süreç ihtiyaçları da değişebilir; bu nedenle birden fazla ürün işlenecekse her birini ayrı yazın. Mümkünse temsilî hammadde ve beklenen son üründen örnek sunun.'],
@@ -169,7 +169,7 @@ export const newGuides = [
     ],links:[['Kuruyemiş kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Fiyat ve teklif karşılaştırma rehberi','/bilgi-merkezi/kuruyemis-kavurma-makinesi-fiyati/'],['Siparişe özel üretim rehberi','/bilgi-merkezi/istege-gore-kuruyemis-kavurma-makinesi/'],['Teklif için iletişim','/iletisim/']]
   },
   {
-    slug:'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu',title:'Kuruyemiş Kavurma Makinesi Teknik Çizimi: Sipariş Öncesi Kontrol Listesi',
+    slug:'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu',title:'Kuruyemiş Kavurma Makinesi Teknik Çizimi: Sipariş Öncesi Kontrol Listesi',seoTitle:'Kuruyemiş Makinesi Teknik Çizim Rehberi',
     desc:'Kuruyemiş kavurma makinesi siparişinden önce teknik çizimde ölçüleri, taşıma yolunu, bağlantıları ve bakım erişimini kontrol etmek için pratik rehber.',date:'2026-09-30',
     sections:[
       ['Katalog ölçüsü ile sipariş çizimini ayırın','E-katalogdaki ölçüler ilk inceleme için yararlı bir referanstır. Siparişe özel makinenin dış ölçülerini, bağlantı noktalarını ve seçeneklerini güncel teknik çizim üzerinden yazılı biçimde teyit edin. Önceki model veya katalog çizimini son onay belgesi kabul etmeyin.'],
