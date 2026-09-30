@@ -156,6 +156,28 @@ export const newGuides = [
       ['Teklifleri aynı kapsam üzerinden karşılaştırın','Makine kapsamı, yardımcı ekipmanlar, tesis bağlantıları, teslim ve kurulum sorumluluğu, eğitim ve kabul adımlarını ayrı ayrı isteyin. Böylece farklı tekliflerde nelerin dahil olduğunu eşit biçimde görebilirsiniz.'],
       ['Denizli’de görüşmeye hazırlanın','Sonsuz Makina, Gıda ve Toptancılar Sitesi, 7133. Sokak No: 5, Bozburun Mahallesi, Merkezefendi / Denizli adresindedir. İlk görüşme için ürününüzü, hedeflediğiniz sonucu, mevcut yerleşim bilgisini ve varsa katalog modelini iletmeniz yeterlidir.']
     ],links:[['Kuruyemiş kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['E-katalog ve teknik bilgiler','/e-katalog/'],['Teklif için iletişim','/iletisim/']]
+  },
+  {
+    slug:'kuruyemis-kavurma-makinesi-teklif-talebi',title:'Kuruyemiş Kavurma Makinesi Teklifi: Üreticiye Hangi Bilgiler Gönderilmeli?',
+    desc:'İhtiyacınızı doğru anlatan bir kuruyemiş kavurma makinesi teklif talebi hazırlayın: ürün, hedef sonuç, tesis, makine tipi ve sipariş kapsamı için pratik kontrol listesi.',date:'2026-09-30',
+    sections:[
+      ['Ürünü ve hedeflenen sonucu açıklayın','Talepte işlenecek ürünün adını, mevcut hazırlama biçimini ve hedeflediğiniz kavurma niteliğini belirtin. Ürün türünü değiştirdiğinizde süreç ihtiyaçları da değişebilir; bu nedenle birden fazla ürün işlenecekse her birini ayrı yazın. Mümkünse temsilî hammadde ve beklenen son üründen örnek sunun.'],
+      ['Makine tipini tek başına kesin karar gibi sunmayın','Bantlı ya da dönerli bir sistem düşündüğünüzü belirtebilirsiniz; ancak son seçimi ürün denemesi, proses beklentisi ve tesis koşullarıyla birlikte değerlendirin. Makine ismi tek başına ürün uyumluluğunu veya çıkacak sonucu kanıtlamaz.'],
+      ['Tesis bilgisi ve yerleşimi paylaşın','Kurulum yerinin ölçülerini, giriş kapısı ve taşıma yolunu, mevcut ekipman bağlantılarını, enerji veya yakıt erişimini ve havalandırma koşullarını iletin. Bir kroki ya da mevcut hat fotoğrafı ilk teknik görüşmeyi hızlandırabilir. Kesin ölçüler güncel sipariş çiziminde teyit edilmelidir.'],
+      ['Teklif kapsamını kalem kalem sorun','Teklifte hangi makine ve yardımcı ekipmanların bulunduğunu, tesis bağlantılarının kimin sorumluluğunda olduğunu, teslimat ve kurulum kapsamını, eğitim ve kabul adımlarını ayrı ayrı isteyin. Böylece farklı teklifleri aynı kapsam üzerinden karşılaştırabilirsiniz.'],
+      ['Göndermeye hazır kısa talep taslağı','“İşlemek istediğimiz ürün: … / Beklediğimiz sonuç: … / Düşündüğümüz makine tipi veya katalog modeli: … / Mevcut tesis ve hat bilgisi: … / Numune veya çizim paylaşabiliriz: … / Teklifte netleştirmek istediğimiz kapsam: …” alanlarını doldurun. Bilinmeyen teknik ayrıntılar için tahminde bulunmayın; üreticiyle birlikte netleştirin.']
+    ],links:[['Kuruyemiş kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Fiyat ve teklif karşılaştırma rehberi','/bilgi-merkezi/kuruyemis-kavurma-makinesi-fiyati/'],['Siparişe özel üretim rehberi','/bilgi-merkezi/istege-gore-kuruyemis-kavurma-makinesi/'],['Teklif için iletişim','/iletisim/']]
+  },
+  {
+    slug:'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu',title:'Kuruyemiş Kavurma Makinesi Teknik Çizimi: Sipariş Öncesi Kontrol Listesi',
+    desc:'Kuruyemiş kavurma makinesi siparişinden önce teknik çizimde ölçüleri, taşıma yolunu, bağlantıları ve bakım erişimini kontrol etmek için pratik rehber.',date:'2026-09-30',
+    sections:[
+      ['Katalog ölçüsü ile sipariş çizimini ayırın','E-katalogdaki ölçüler ilk inceleme için yararlı bir referanstır. Siparişe özel makinenin dış ölçülerini, bağlantı noktalarını ve seçeneklerini güncel teknik çizim üzerinden yazılı biçimde teyit edin. Önceki model veya katalog çizimini son onay belgesi kabul etmeyin.'],
+      ['Makinenin tesise nasıl gireceğini kontrol edin','Yalnızca makinenin kurulacağı zemini değil; sevkiyat aracından indirme, kapı ve koridor geçişleri, dönüş alanı ve kurulum sırasındaki manevrayı da değerlendirin. Ölçümleri tesis sorumlusu ve üreticiyle aynı çizim üzerinde karşılaştırın.'],
+      ['Üretim hattıyla bağlantıları işaretleyin','Ürün besleme ve çıkış yönünü, önceki ve sonraki ekipmanları, operatör çalışma alanını ve mevcut hatla kesişen noktaları çizimde gösterin. Bağlantı biçimi veya yönü belirsizse imalat onayından önce teknik ekipten açıklama isteyin.'],
+      ['Enerji, yakıt ve havalandırma notlarını teyit edin','Katalog ve çizimde belirtilen ısıtma seçeneğini esas alarak tesisin elektrik veya yakıt bağlantılarını, havalandırma ve baca gereksinimlerini ilgili sorumlularla doğrulayın. Kesin teknik değerleri güncel makine föyü ve tesis projesi üzerinden teyit etmeden varsayım yapmayın.'],
+      ['Temizlik, bakım ve kabul maddelerini yazılılaştırın','Günlük temizlik ve periyodik bakım için gerekli erişimi, sökülebilen parçaları ve servis yaklaşımını sorun. Onay çiziminde revizyon tarihi ve tarafların onayı bulunsun; ürün numunesiyle deneme yapılacaksa kabul ölçütleri ayrıca teklife eklensin.']
+    ],links:[['E-katalogdan makine ölçülerini inceleyin','/e-katalog/'],['Bantlı ve dönerli sistemleri karşılaştırın','/bilgi-merkezi/bantli-donerli-kavurma-makinesi-secimi/'],['Kuruyemiş kavurma modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Teknik görüşme için iletişim','/iletisim/']]
   }
 ];
 
