@@ -30,6 +30,8 @@ const verification='googleee526f6a32479162.html';
 if(!fs.existsSync(path.join(root,verification))||fs.readFileSync(path.join(root,verification),'utf8')!==fs.readFileSync(verification,'utf8'))errors.push('Google alan adı doğrulama dosyası yayın kökünde eksik veya değişmiş.');
 const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
+const notFound=fs.readFileSync(path.join(root,'404.html'),'utf8');
+if(!notFound.includes('<meta name="robots" content="noindex, nofollow">')||/rel="canonical"/.test(notFound))errors.push('404 sayfası noindex değil veya ana sayfaya canonical veriyor.');
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
 if(!sitemap.includes(`<loc>${expectedSite}/</loc>`)||!robots.includes(`Sitemap: ${expectedSite}/sitemap.xml`))errors.push('Site haritası ve robots.txt yayın adresiyle eşleşmiyor.');
 for(const product of products){

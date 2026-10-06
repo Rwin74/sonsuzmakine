@@ -18,6 +18,8 @@ const guideImageMap={
   'kuruyemis-kavurma-makinesi-teknik-cizim-kontrolu':'ht-100-kilavuzlu-kavurma-firini.webp'
   ,'kuruyemis-kavurma-makinesi-numune-denemesi':'ht-150.webp'
   ,'kuruyemis-eleme-makinesi-secimi':'elek.webp'
+  ,'yer-fistigi-kavurma-makinesi-secimi':'ht-150.webp'
+  ,'aycekirdegi-kavurma-makinesi-secimi':'ht-150.webp'
 };
 
 export function guideImage(slug){return guideImageMap[slug]||'ht-150.webp'}
