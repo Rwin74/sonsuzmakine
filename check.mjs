@@ -3,6 +3,7 @@ import path from 'node:path';
 import {products,articles} from './content.mjs';
 import {productTopics} from './seo-content.mjs';
 import {localizedGuides} from './localized-guides.mjs';
+import {categoryEditorial} from './category-editorial.mjs';
 import {expandedGuides,newGuides} from './guides.mjs';
 const root=path.resolve('dist');
 if(!fs.existsSync(root))throw Error('Önce node build.mjs çalıştırın.');
@@ -32,6 +33,13 @@ const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
 const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
 const notFound=fs.readFileSync(path.join(root,'404.html'),'utf8');
 if(!notFound.includes('<meta name="robots" content="noindex, nofollow">')||/rel="canonical"/.test(notFound))errors.push('404 sayfası noindex değil veya ana sayfaya canonical veriyor.');
+for(const [locale,prefix] of [['tr',''],['en','en/'],['ar','ar/']]){
+  const file=path.join(root,prefix,'urunler','kuruyemis-kavurma-makineleri','index.html');
+  const html=fs.readFileSync(file,'utf8');
+  const editorial=categoryEditorial['kuruyemis-kavurma-makineleri'][locale];
+  if(!html.includes(editorial.heading)||editorial.sections.some(([heading])=>!html.includes(heading))||editorial.faq.some(([question])=>!html.includes(question)))errors.push(`${locale}: kavurma makinesi kategori içeriği eksik.`);
+  if(!html.includes('hreflang="tr"')||!html.includes('hreflang="en"')||!html.includes('hreflang="ar"'))errors.push(`${locale}: kategori sayfası dil alternatifleri eksik.`);
+}
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
 if(!sitemap.includes(`<loc>${expectedSite}/</loc>`)||!robots.includes(`Sitemap: ${expectedSite}/sitemap.xml`))errors.push('Site haritası ve robots.txt yayın adresiyle eşleşmiyor.');
 for(const product of products){
