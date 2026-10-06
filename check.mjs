@@ -39,6 +39,8 @@ for(const [locale,prefix] of [['tr',''],['en','en/'],['ar','ar/']]){
   const editorial=categoryEditorial['kuruyemis-kavurma-makineleri'][locale];
   if(!html.includes(editorial.heading)||editorial.sections.some(([heading])=>!html.includes(heading))||editorial.faq.some(([question])=>!html.includes(question)))errors.push(`${locale}: kavurma makinesi kategori içeriği eksik.`);
   if(!html.includes('hreflang="tr"')||!html.includes('hreflang="en"')||!html.includes('hreflang="ar"'))errors.push(`${locale}: kategori sayfası dil alternatifleri eksik.`);
+  if(locale==='en'&&(!html.includes('Electric')||!html.includes('Gas / diesel')||html.includes('>Elektrik<')||html.includes('>Gaz / motorin<')))errors.push('en: katalog ısıtma değerleri çevrilmemiş.');
+  if(locale==='ar'&&(!html.includes('كهرباء')||!html.includes('غاز / ديزل')||html.includes('>Elektrik<')||html.includes('>Gaz / motorin<')))errors.push('ar: katalog ısıtma değerleri çevrilmemiş.');
 }
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
 if(!sitemap.includes(`<loc>${expectedSite}/</loc>`)||!robots.includes(`Sitemap: ${expectedSite}/sitemap.xml`))errors.push('Site haritası ve robots.txt yayın adresiyle eşleşmiyor.');
