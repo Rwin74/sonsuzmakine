@@ -1,6 +1,23 @@
 const toggle=document.querySelector('.menu-toggle');
 const menu=document.querySelector('.mobile-nav');
 if(toggle&&menu)toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Menüyü kapat':'Menüyü aç')});
+document.querySelectorAll('[data-quote-form]').forEach(form=>{
+  const machine=form.elements.machine;
+  const requested=new URLSearchParams(location.search).get('urun');
+  if(machine&&requested){const match=[...machine.options].find(option=>option.value.toLocaleLowerCase()===requested.toLocaleLowerCase());if(match)machine.value=match.value}
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!form.reportValidity())return;
+    const locale=form.dataset.locale||'tr';
+    const data=new FormData(form);
+    const labels=locale==='en'?['Name','Phone','Machine','Product and requested process']:locale==='ar'?['الاسم','الهاتف','الآلة','المنتج والعملية المطلوبة']:['Ad soyad','Telefon','Makine','Ürün ve istenen işlem'];
+    const values=[data.get('name'),data.get('phone'),data.get('machine')|| (locale==='en'?'Not sure yet':locale==='ar'?'لم أحدد بعد':'Henüz emin değilim'),data.get('details')||'—'];
+    const message=['Hello, I would like to get information about a machine.','Merhaba, makine hakkında bilgi almak istiyorum.','مرحباً، أود الاستفسار عن آلة.'][locale==='en'?0:locale==='ar'?2:1]+'\n'+labels.map((label,index)=>`${label}: ${values[index]}`).join('\n');
+    const url=`https://wa.me/905378896885?text=${encodeURIComponent(message)}`;
+    window.open(url,'_blank','noopener,noreferrer');
+    const status=form.querySelector('[data-quote-status]');if(status)status.textContent=locale==='en'?'WhatsApp opened with your draft. Review it and press Send when ready.':locale==='ar'?'فُتح واتساب مع المسودة. راجعها واضغط إرسال عندما تكون جاهزاً.':'WhatsApp taslağı açıldı. Kontrol edip göndermek için WhatsApp’ta Gönder’e basın.';
+  });
+});
 const play=document.querySelector('.video-play');
 if(play){
   const frame=play.closest('.video-frame');

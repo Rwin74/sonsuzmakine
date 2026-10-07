@@ -22,6 +22,15 @@ if(securityHeaders.get('strict-transport-security')!=='max-age=31536000')errors.
 const sources=new Set();
 for(const redirect of config.redirects){if(sources.has(redirect.source))errors.push(`Yinelenen yönlendirme: ${redirect.source}`);sources.add(redirect.source);if(!fs.existsSync(path.join(root,redirect.destination,'index.html')))errors.push(`Yönlendirme hedefi eksik: ${redirect.destination}`)}
 const home=fs.readFileSync(path.join(root,'index.html'),'utf8');
+for(const [locale,file,requiredText] of [['tr','iletisim/index.html','WhatsApp’ta teklif iste'],['en','en/iletisim/index.html','Request a quote on WhatsApp'],['ar','ar/iletisim/index.html','اطلب عرض سعر عبر واتساب']]){
+  const html=fs.readFileSync(path.join(root,file),'utf8');
+  if(!html.includes('data-quote-form')||!html.includes('name="phone"')||!html.includes('name="machine"')||!html.includes(requiredText))errors.push(`${locale} iletişim sayfasında teklif formu eksik.`);
+  if(/name="(?:capacity|volume)"/i.test(html))errors.push(`${locale} iletişim formunda istenmeyen kapasite/hacim alanı var.`);
+}
+for(const locale of ['en','ar'])for(const product of products){
+  const html=fs.readFileSync(path.join(root,locale,'urunler',product.slug,'index.html'),'utf8');
+  if(!html.includes(`/iletisim/?urun=${encodeURIComponent(product.model)}`))errors.push(`${locale}/${product.slug}: teklif bağlantısı model bilgisini taşımıyor.`);
+}
 for(const pattern of [/href="(\/assets\/app-[a-f0-9]{10}\.css)"/,/src="(\/assets\/site-[a-f0-9]{10}\.js)"/]){
   const asset=home.match(pattern)?.[1];
   if(!asset||!fs.existsSync(path.join(root,asset)))errors.push('Sürümlü CSS veya JS dosyası eksik.');
