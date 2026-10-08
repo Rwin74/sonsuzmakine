@@ -4,14 +4,15 @@ if(toggle&&menu)toggle.addEventListener('click',()=>{const open=menu.classList.t
 document.querySelectorAll('[data-quote-form]').forEach(form=>{
   const machine=form.elements.machine;
   const requested=new URLSearchParams(location.search).get('urun');
-  if(machine&&requested){const match=[...machine.options].find(option=>option.value.toLocaleLowerCase()===requested.toLocaleLowerCase());if(match)machine.value=match.value}
+  if(machine&&requested){const query=requested.toLocaleLowerCase();const match=[...machine.options].find(option=>option.value.toLocaleLowerCase()===query||option.dataset.model?.toLocaleLowerCase()===query);if(match)machine.value=match.value}
   form.addEventListener('submit',event=>{
     event.preventDefault();
     if(!form.reportValidity())return;
     const locale=form.dataset.locale||'tr';
     const data=new FormData(form);
     const labels=locale==='en'?['Name','Phone','Machine','Product and requested process']:locale==='ar'?['الاسم','الهاتف','الآلة','المنتج والعملية المطلوبة']:['Ad soyad','Telefon','Makine','Ürün ve istenen işlem'];
-    const values=[data.get('name'),data.get('phone'),data.get('machine')|| (locale==='en'?'Not sure yet':locale==='ar'?'لم أحدد بعد':'Henüz emin değilim'),data.get('details')||'—'];
+    const selectedMachine=machine?.selectedOptions?.[0];
+    const values=[data.get('name'),data.get('phone'),selectedMachine?.value?(selectedMachine.textContent||'').trim():(locale==='en'?'Not sure yet':locale==='ar'?'لم أحدد بعد':'Henüz emin değilim'),data.get('details')||'—'];
     const message=['Hello, I would like to get information about a machine.','Merhaba, makine hakkında bilgi almak istiyorum.','مرحباً، أود الاستفسار عن آلة.'][locale==='en'?0:locale==='ar'?2:1]+'\n'+labels.map((label,index)=>`${label}: ${values[index]}`).join('\n');
     const url=`https://wa.me/905378896885?text=${encodeURIComponent(message)}`;
     window.open(url,'_blank','noopener,noreferrer');

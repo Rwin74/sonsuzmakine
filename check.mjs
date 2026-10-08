@@ -26,10 +26,16 @@ for(const [locale,file,requiredText] of [['tr','iletisim/index.html','WhatsApp�
   const html=fs.readFileSync(path.join(root,file),'utf8');
   if(!html.includes('data-quote-form')||!html.includes('name="phone"')||!html.includes('name="machine"')||!html.includes(requiredText))errors.push(`${locale} iletişim sayfasında teklif formu eksik.`);
   if(/name="(?:capacity|volume)"/i.test(html))errors.push(`${locale} iletişim formunda istenmeyen kapasite/hacim alanı var.`);
+  const optionValues=[...html.matchAll(/<option value="([^"]+)"(?: data-model="[^"]+")?>/g)].map(([,value])=>value).filter(Boolean);
+  if(new Set(optionValues).size!==optionValues.length)errors.push(`${locale} iletişim formunda aynı değerle eşleşen birden fazla makine var.`);
 }
-for(const locale of ['en','ar'])for(const product of products){
-  const html=fs.readFileSync(path.join(root,locale,'urunler',product.slug,'index.html'),'utf8');
-  if(!html.includes(`/iletisim/?urun=${encodeURIComponent(product.model)}`))errors.push(`${locale}/${product.slug}: teklif bağlantısı model bilgisini taşımıyor.`);
+for(const product of products){
+  const html=fs.readFileSync(path.join(root,'urunler',product.slug,'index.html'),'utf8');
+  if(!html.includes(`/iletisim/?urun=${encodeURIComponent(product.slug)}`))errors.push(`tr/${product.slug}: teklif bağlantısı benzersiz makine bilgisini taşımıyor.`);
+  for(const locale of ['en','ar']){
+    const localized=fs.readFileSync(path.join(root,locale,'urunler',product.slug,'index.html'),'utf8');
+    if(!localized.includes(`/iletisim/?urun=${encodeURIComponent(product.slug)}`))errors.push(`${locale}/${product.slug}: teklif bağlantısı benzersiz makine bilgisini taşımıyor.`);
+  }
 }
 for(const pattern of [/href="(\/assets\/app-[a-f0-9]{10}\.css)"/,/src="(\/assets\/site-[a-f0-9]{10}\.js)"/]){
   const asset=home.match(pattern)?.[1];
