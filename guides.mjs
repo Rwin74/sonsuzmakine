@@ -147,7 +147,7 @@ export const newGuides = [
     ],links:[['Bantlı kavurma makinesi modelleri','/urunler/kuruyemis-kavurma-makineleri/'],['Dönerli kılavuzlu kavurma makineleri','/urunler/kilavuzlu-kavurma-makineleri/'],['Kaynak e-kataloğu (PDF)','/assets/catalog/sonsuz-makina-katalog-v2.pdf'],['Teklif için iletişim','/iletisim/']]
   },
   {
-    slug:'denizli-kuruyemis-makinesi-imalati',title:'Denizli Kuruyemiş Makinesi İmalatı: Teklif Süreci Nasıl İlerler?',seoTitle:'Denizli’de Kavurma Makinesi Teklif Rehberi',
+    slug:'denizli-kuruyemis-makinesi-imalati',title:'Denizli Kuruyemiş Makinesi İmalatı: Teklif Süreci Nasıl İlerler?',seoTitle:'Denizli Kuruyemiş Makinesi İmalatı',
     desc:'Denizli’de kuruyemiş kavurma makinesi üreticisi arayan işletmeler için ihtiyaç tanımı, teknik görüşme, numune ve siparişe özel teklif adımları.',date:'2026-09-29',
     sections:[
       ['İhtiyacı makine adından önce tarif edin','İşlenecek ürünü, hedeflediğiniz kavurma niteliğini, mevcut üretim adımlarını ve yeni makinenin hatta nerede çalışacağını belirtin. Makine tipi seçimi bu bilgilerle yapılır; yalnızca genel ürün adına bakarak uygunluk kararı vermek doğru olmaz.'],

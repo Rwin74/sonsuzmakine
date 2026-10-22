@@ -57,6 +57,17 @@ for(const [locale,prefix] of [['tr',''],['en','en/'],['ar','ar/']]){
   if(locale==='en'&&(!html.includes('Electric')||!html.includes('Gas / diesel')||html.includes('>Elektrik<')||html.includes('>Gaz / motorin<')))errors.push('en: katalog ısıtma değerleri çevrilmemiş.');
   if(locale==='ar'&&(!html.includes('كهرباء')||!html.includes('غاز / ديزل')||html.includes('>Elektrik<')||html.includes('>Gaz / motorin<')))errors.push('ar: katalog ısıtma değerleri çevrilmemiş.');
 }
+const roastPage=fs.readFileSync(path.join(root,'urunler','kuruyemis-kavurma-makineleri','index.html'),'utf8');
+if(!roastPage.includes('<title>Kuruyemiş Kavurma Makineleri | Sonsuz Makina</title>')||!roastPage.includes('<h1>Kuruyemiş Kavurma Makineleri</h1>')||!roastPage.includes('Kuruyemiş kavurma makineleri ve bantlı kavurma fırını modellerini inceleyin.'))errors.push('Kavurma kategorisi ana sorguya göre optimize edilmemiş.');
+for(const locale of ['tr','en','ar']){
+  const prefix=locale==='tr'?'':`${locale}/`;
+  const roast=fs.readFileSync(path.join(root,prefix,'urunler','kuruyemis-kavurma-makineleri','index.html'),'utf8');
+  const target=`/${locale==='tr'?'':`${locale}/`}bilgi-merkezi/denizli-kuruyemis-makinesi-imalati/`;
+  if(!roast.includes(target))errors.push(`${locale}: kategori sayfasından Denizli imalat rehberine iç bağlantı eksik.`);
+}
+const denizliGuide=fs.readFileSync(path.join(root,'bilgi-merkezi','denizli-kuruyemis-makinesi-imalati','index.html'),'utf8');
+if(!denizliGuide.includes('<title>Denizli Kuruyemiş Makinesi İmalatı | Sonsuz Makina</title>'))errors.push('Denizli imalat rehberinin başlığı ana arama niyetini karşılamıyor.');
+for(const file of pages){const html=fs.readFileSync(file,'utf8');if(/\b(?:apk\s*(?:rvip|vip|v\d)|rvip\s*apk|b8vip)\b/i.test(html))errors.push(`${path.relative(root,file)}: ilgisiz APK spam içeriği üretildi.`)}
 if(!home.includes(`<link rel="canonical" href="${expectedSite}/">`))errors.push('Ana sayfa canonical adresi yayın adresiyle eşleşmiyor.');
 if(!sitemap.includes(`<loc>${expectedSite}/</loc>`)||!robots.includes(`Sitemap: ${expectedSite}/sitemap.xml`))errors.push('Site haritası ve robots.txt yayın adresiyle eşleşmiyor.');
 for(const product of products){
